@@ -244,7 +244,7 @@
                         videos &amp; images
                       </div>
                       <div class="select-style">
-                          <select>
+                          <select id="mobileFilter">
                            <?php 
                             if(isset($records)){
                               foreach($records as $playerData) { ?>
@@ -364,7 +364,7 @@
                        <?php }else if($videoData['type'] == 'video') { ?>
                           <div class="item" id="modalImg_<?php echo $videoData['id']; ?>" >
                             <div class="embed-responsive embed-responsive-16by9">
-                               <iframe class="embed-responsive-item" src="<?php echo $videoData['link']; ?>" frameborder="0" allowfullscreen></iframe>
+                               <iframe class="embed-responsive-item" src="<?php echo $videoData['media_value']; ?>" frameborder="0" allowfullscreen></iframe>
                             </div>
                           </div>
                        <?php } 
