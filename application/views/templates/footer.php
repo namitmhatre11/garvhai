@@ -61,7 +61,7 @@
 		  $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
           $(this).parents('.heros-list').find('.hover-overlays').show();
           $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
-          if(playerId && playerMode != 'videos'){
+          if(playerId && playerMode){
 	          $('.hero-detail-info').removeClass('hidden').css({'left':lr})
 	          if($(window).width()>1006){
 				    switch(lb){
@@ -96,7 +96,7 @@
 			          success: function(data) {
 			          	if($.trim(data) != "") {
 			          		var modalHtml = '';
-			          		if(playerMode == 'profile'){
+		          			if(playerMode == 'profile'){
 				          		$('.hero-detail-inner-media').addClass('hidden');
 		          	    		$('.hero-detail-inner-profile').removeClass('hidden');
 		          	    		/*$.each( data, function( index, profileValue ) { 
@@ -104,6 +104,9 @@
 				          				console.log(profileValue[i].media_value);
 				          			}
 				          		}); */
+		          	    	}else if(playerMode == 'videos'){
+				          		$('.hero-detail-inner-media').addClass('hidden');
+		          	    		$('.hero-detail-inner-profile').removeClass('hidden');
 		          	    	}else if(playerMode == 'media'){
 				          		$('.hero-detail-inner-profile').addClass('hidden');
 		          	    		$('.hero-detail-inner-media').removeClass('hidden');
@@ -113,11 +116,10 @@
 				          				modalHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt">'+mediaValue[i].description+'</div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
 				          			}
 				          		}); 
-								$('.media-list-wrpr').html(modalHtml);
-		          	    	}
-		          	    }
-	                	
-	                  }
+				          		$('.media-list-wrpr').html(modalHtml);
+							}
+	          	        }
+	                }
 	          	});
           }
 
@@ -132,6 +134,7 @@
             return $('.hero-detail-info').removeClass('right').removeClass('top').removeClass('bottom').removeClass('left');
           }           
         });
+
         $('.hover-overlays').hover(function(e){
           e.stopPropagation();
           e.preventDefault();
