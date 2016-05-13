@@ -35,8 +35,55 @@
           <div class="col-xs-12">
             <div class="row">
               <?php 
+              $count=1;
+              $lr="";
+              $tb="";
               if(isset($records)){
-                foreach($records as $playerData) { ?>          
+                foreach($records as $playerData) { 
+                  switch ($count) {
+                    case '1':
+                      $lr="20%";
+                      $tb="tl";                      
+                      break;
+                       case '2':
+                        $lr="40%";
+                        $tb="tl";                      
+                      break;
+                       case '3':
+                      $lr="0";
+                      $tb="tr";                      
+                      break;
+                       case '4':
+                      $lr="20%";
+                      $tb="tr";                      
+                      break;
+                       case '5':
+                      $lr="40%";
+                      $tb="tr";                      
+                      break;
+                       case '6':
+                      $lr="20%";
+                      $tb="bl";                      
+                      break;
+                       case '7':
+                      $lr="40%";
+                      $tb="bl";                      
+                      break;
+                       case '8':
+                      $lr="0";
+                      $tb="br";                      
+                      break;
+                       case '9':
+                      $lr="20%";
+                      $tb="br";                      
+                      break;                    
+                    default:
+                     $lr="40%";
+                      $tb="br"; 
+                      break;
+                  }
+                  ?> 
+
                   <div class="col-xs-4 col-xs-20 overlay-wrpr">
                     <div class="heros-name text-uppercase"><?php echo $playerData['name']; ?></div>
                     <div class="row">
@@ -45,9 +92,9 @@
                     <div class="hover-overlays"></div>
                     <div class="user-prof-wrpr text-center">
                       <div class="text-uppercase prof-name-wrpr"><?php echo $playerData['name']; ?></div>
-                      <div class="profile-btn text-uppercase" data-lr="20%" data-tb="tl" data-playermode="profile" data-playerid="<?php echo $playerData['id']; ?>"><span class="anim-btn-bg"></span><span class="anim-btn-txt">profile</span></div>
-                      <div class="profile-btn text-uppercase" data-lr="20%" data-tb="tl" data-playermode="videos" data-playerid="<?php echo $playerData['id']; ?>">videos & images</div>
-                      <div class="profile-btn text-uppercase" data-lr="20%" data-tb="tl" data-playermode="media" data-playerid="<?php echo $playerData['id']; ?>">Media</div>
+                      <div class="profile-btn text-uppercase" data-lr="<?php echo $lr?>" data-tb="<?php echo $tb?>" data-playermode="profile" data-playerid="<?php echo $playerData['id']; ?>"><span class="anim-btn-bg"></span><span class="anim-btn-txt">profile</span></div>
+                      <div class="profile-btn text-uppercase" data-lr="<?php echo $lr?>" data-tb="<?php echo $tb?>" data-playermode="videos" data-playerid="<?php echo $playerData['id']; ?>">videos & images</div>
+                      <div class="profile-btn text-uppercase" data-lr="<?php echo $lr?>" data-tb="<?php echo $tb?>" data-playermode="media" data-playerid="<?php echo $playerData['id']; ?>">Media</div>
                       <div class="text-uppercase supp-ply-txt">support player</div>
                       <div class="heros-social-links">
                         <ul class="list-inline">
@@ -57,7 +104,9 @@
                       </div>
                     </div>
                   </div>
-                <?php } 
+                <?php 
+                  $count++;
+                } 
               } ?>
               <div class="col-xs-40 col-xs-4 hero-detail-info hidden">
                 <div class="hero-detail-inner hero-detail-inner-profile hidden">
@@ -276,10 +325,17 @@
                   foreach($videoRecords as $videoData) { ?> 
                     <div class="col-xs-4 col-xs-20 light-box-wrpr">
                       <div class="row">
-                        <a href="<?php echo $videoData['link']; ?>" data-toggle="modal" data-target="#myModal" rel="prettyPhoto[gallery1]">
-                          <img src="<?php echo base_url(); ?>uploads/player.jpg" class="full-width-img">
-                          <div class="light-box-overlay video-overlay"></div>
-                        </a>                  
+                      <?php if($videoData['type'] == 'image') { ?>
+                          <a>
+                            <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>" class="full-width-img">
+                            <div class="light-box-overlay image-overlay" data-id="<?php echo $videoData['id']; ?>"></div>
+                          </a>   
+                        <?php }else if($videoData['type'] == 'video') { ?>
+                            <a href="#">
+                              <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail']; ?>" class="full-width-img">
+                              <div class="light-box-overlay video-overlay" data-id="<?php echo $videoData['id']; ?>"></div>
+                            </a>
+                        <?php } ?>               
                       </div>                
                     </div>
               <?php }
@@ -299,14 +355,21 @@
         <div class="modal-body">
           <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="<?php echo base_url(); ?>assets/img/video-bg.png">
-              </div>
-              <div class="item">
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2Y_HcgKrBhI" frameborder="0" allowfullscreen></iframe>
-                </div>
-              </div>
+        <?php if(isset($videoRecords)){
+                  foreach($videoRecords as $videoData) { 
+                      if($videoData['type'] == 'image') { ?>
+                        <div class="item" id="modalImg_<?php echo $videoData['id']; ?>">
+                          <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>">
+                        </div>
+                       <?php }else if($videoData['type'] == 'video') { ?>
+                          <div class="item" id="modalImg_<?php echo $videoData['id']; ?>" >
+                            <div class="embed-responsive embed-responsive-16by9">
+                               <iframe class="embed-responsive-item" src="<?php echo $videoData['link']; ?>" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                          </div>
+                       <?php } 
+                  }
+                } ?>
             </div>
             <!-- Controls -->
             <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
