@@ -1,0 +1,1 @@
+<h3>New entry created with title: so and so</h3>
