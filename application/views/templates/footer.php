@@ -53,13 +53,13 @@
           theme:"dark"
         });
 
-        $('.profile-btn').click(function(){
+        $('.profile-btn').click(function(e){
           var lr= $(this).data('lr');
           var lb= $(this).data('tb');
           var playerId = $(this).data('playerid');
           var playerMode = $(this).data('playermode');
-          $('.media-btn-mob').attr('data-profileid',playerId);
-		      $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
+          $('.media-btn-mob').data('profileid',playerId);
+  	      $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
           $(this).parents('.heros-list').find('.hover-overlays').show();
           $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
           if(playerId && playerMode){
