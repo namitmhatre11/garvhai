@@ -58,78 +58,37 @@
           var lb= $(this).data('tb');
           var playerId = $(this).data('playerid');
           var playerMode = $(this).data('playermode');
-		  $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
+          $('.media-btn-mob').attr('data-profileid',playerId);
+		      $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
           $(this).parents('.heros-list').find('.hover-overlays').show();
           $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
           if(playerId && playerMode){
 	          $('.hero-detail-info').removeClass('hidden').css({'left':lr})
 	          if($(window).width()>1006){
-				    switch(lb){
-				      case "tr" :    
-				      reomoveItem();        
-				      $('.hero-detail-info').addClass('right').addClass('top');
-				      break;
-				      case "tl" :   
-				      reomoveItem();         
-				      $('.hero-detail-info').addClass('left').addClass('top');
-				      break;
-				      case 'br':    
-				      reomoveItem();        
-				      $('.hero-detail-info').addClass('right').addClass('bottom');
-				      break;
-				      default :
-				      reomoveItem();
-				      $('.hero-detail-info').addClass('left').addClass('bottom');
-				    }  
-                }
-		        else{
+    				    switch(lb){
+    				      case "tr" :    
+    				      reomoveItem();        
+    				      $('.hero-detail-info').addClass('right').addClass('top');
+    				      break;
+    				      case "tl" :   
+    				      reomoveItem();         
+    				      $('.hero-detail-info').addClass('left').addClass('top');
+    				      break;
+    				      case 'br':    
+    				      reomoveItem();        
+    				      $('.hero-detail-info').addClass('right').addClass('bottom');
+    				      break;
+    				      default :
+    				      reomoveItem();
+    				      $('.hero-detail-info').addClass('left').addClass('bottom');
+    				    }  
+            }else{
 		          $("body, html").animate({
 		                scrollTop: $("#hero-wrpr").offset().top
 		            }, 600);
 		        }
-          
-	          	$.ajax({
-	          		  url: baseUrl+"index.php/home/player_model_data",
-			          type: 'POST',            
-			          data: { 'mode': playerMode, 'playerId': playerId },
-			          dataType: "json",
-			          success: function(data) {
-			          	if($.trim(data) != "") {
-			          		var modalHtml = '';
-		          			if(playerMode == 'profile'){
-				          		$('.hero-detail-inner-media').addClass('hidden');
-		          	    		$('.hero-detail-inner-profile').removeClass('hidden');
-		          	    		/*$.each( data, function( index, profileValue ) { 
-				          			for(var i=0; i<profileValue.length; i++){
-				          				console.log(profileValue[i].media_value);
-				          			}
-				          		}); */
-		          	    	}else if(playerMode == 'videos'){
-				          		$('.hero-detail-inner-media').addClass('hidden');
-		          	    		$('.hero-detail-inner-profile').removeClass('hidden');
-		          	    	}else if(playerMode == 'media'){
-				          		$('.hero-detail-inner-profile').addClass('hidden');
-		          	    		$('.hero-detail-inner-media').removeClass('hidden');
-		          	    		$.each( data, function( index, mediaValue ) { 
-				          			for(var i=0; i<mediaValue.length; i++){
-				          				var published_date = converter(mediaValue[i].published_date);
-				          				modalHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt">'+mediaValue[i].description+'</div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
-				          			}
-				          		}); 
-				          		$('.media-list-wrpr').html(modalHtml);
-							}
-	          	        }
-	                }
-	          	});
+            showModalContent(playerId,playerMode);
           }
-
-          function converter(s) {
-			  var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-			  s =  s.replace(/-/g, '/');
-			  var d = new Date(s);
-			  return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
-			}
-
           function reomoveItem(){
             return $('.hero-detail-info').removeClass('right').removeClass('top').removeClass('bottom').removeClass('left');
           }           
@@ -146,7 +105,57 @@
           $('.hover-overlays').hide();
           $('.overlay-wrpr').removeClass('active-img');
         });
+
+        $('.media-show').click(function(){
+          showModalContent($(this).data('profileid'),$(this).data('mode'));
+        });
+
+        $('.profile-show').click(function(){
+          showModalContent($(this).data('profileid'),$(this).data('mode'));
+        });
       });
+
+      function showModalContent(playerId, playerMode){
+        if(playerId && playerMode){
+          $.ajax({
+            url: baseUrl+"index.php/home/player_model_data",
+            type: 'POST',            
+            data: { 'mode': playerMode, 'playerId': playerId },
+            dataType: "json",
+            success: function(data) {
+              if($.trim(data) != "") {
+                var mediaHtml = '';
+                if(playerMode == 'profile'){
+                    $('.hero-detail-inner-media').addClass('hidden');
+                    $('.hero-detail-inner-profile').removeClass('hidden');
+                    mediaHtml += '<div class="hero-detail-middle-name text-uppercase">'+data.modal_data[0].name+'</div>'+data.modal_data[0].contest+'<br />'+data.modal_data[0].championship;
+                    $('#profileReplaceData').html(mediaHtml);
+                }else if(playerMode == 'videos'){
+                    $('.hero-detail-inner-media').addClass('hidden');
+                    $('.hero-detail-inner-profile').removeClass('hidden');
+                }else if(playerMode == 'media'){
+                    $('.hero-detail-inner-profile').addClass('hidden');
+                    $('.hero-detail-inner-media').removeClass('hidden');
+                    $.each( data, function( index, mediaValue ) { 
+                      for(var i=0; i<mediaValue.length; i++){
+                        var published_date = converter(mediaValue[i].published_date);
+                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt">'+mediaValue[i].description+'</div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
+                      }
+                    }); 
+                    $('.media-list-wrpr').html(mediaHtml);
+                }
+              }
+            }
+          });
+        }
+
+      }
+      function converter(s) {
+              var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+              s =  s.replace(/-/g, '/');
+              var d = new Date(s);
+              return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+          }
     </script>
   </body>
 </html>
