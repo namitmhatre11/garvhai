@@ -138,38 +138,8 @@
                   </div>
                   <div class="hero-detail-middle">
                     <div id="profileReplaceData">
-                        <!-- <div class="hero-detail-middle-name text-uppercase">
-                          INDERJEET SINGH
-                        </div>
-                        <table class="table table-bordered hero-achive-tab">
-                          <tr>
-                            <td>Qlympic Qualifying Standard</td>
-                            <td>Olympic Qualifying throw</td>
-                            <td>Personal Best</td>
-                            <td>Recent Training </td>
-                          </tr>
-                          <tr class="bold-row">
-                            <td>20.50m</td>
-                            <td>20.50m</td>
-                            <td>20.50m</td>
-                            <td class="recent-traning-txt">Focusing on strength training</td>
-                          </tr>
-                        </table>
-                        <div class="list-title">Major Contest Participated</div>
-                        <ul class="achive-list">
-                          <li>World Athletics Championship, China – Finished 11th</li>
-                          <li>World University Games, South Korea - Gold</li>
-                          <li>Asian Grand Prix, Thailand- Gold</li>
-                          <li>Asian Athletics Championship, China - Gold</li>
-                        </ul>
-                        <div class="list-title">Major Contest Participated</div>
-                        <ul class="achive-list">
-                          <li>South Asian Games, Guwahati and Shillong</li>
-                          <li>2016 World Indoor Championship, Portland</li>
-                          <li>South Asian Games, Guwahati and Shillong</li>
-                          <li>2016 World Indoor Championship, Portland</li>
-                        </ul> -->
-                      </div>
+                        
+                    </div>
                   </div>
                   <div class="hero-detail-bottom">
                     <div class="share-txt-mob">Support</div>
