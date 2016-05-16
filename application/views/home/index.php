@@ -5,7 +5,7 @@
       <div class="top-video-info">
         <div>
           <div class="top-play-btn"><img src="<?php echo base_url(); ?>assets/img/video-play-btn.png"></div>
-          <h2 class="top-video-title text-upppercase">the ubsung heroes</h2>
+          <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
           <div class="top-video-discrp">
             They practise their sport, day in and day out, without complain, without expectation <br class="hidden-small" />for a country that doesn’t even know they exist. Now, it’s time to show them we <br class="hidden-small"/>care. It’s time to make our voices heard. It’s time to say <span>#Garvhai</span>
           </div>          
@@ -137,37 +137,9 @@
                     </div>
                   </div>
                   <div class="hero-detail-middle">
-                    <div class="hero-detail-middle-name text-uppercase">
-                      INDERJEET SINGH
+                    <div id="profileReplaceData">
+                        
                     </div>
-                    <table class="table table-bordered hero-achive-tab">
-                      <tr>
-                        <td>Qlympic Qualifying Standard</td>
-                        <td>Olympic Qualifying throw</td>
-                        <td>Personal Best</td>
-                        <td>Recent Training </td>
-                      </tr>
-                      <tr class="bold-row">
-                        <td>20.50m</td>
-                        <td>20.50m</td>
-                        <td>20.50m</td>
-                        <td class="recent-traning-txt">Focusing on strength training</td>
-                      </tr>
-                    </table>
-                    <div class="list-title">Major Contest Participated</div>
-                    <ul class="achive-list">
-                      <li>World Athletics Championship, China – Finished 11th</li>
-                      <li>World University Games, South Korea - Gold</li>
-                      <li>Asian Grand Prix, Thailand- Gold</li>
-                      <li>Asian Athletics Championship, China - Gold</li>
-                    </ul>
-                    <div class="list-title">Major Contest Participated</div>
-                    <ul class="achive-list">
-                      <li>South Asian Games, Guwahati and Shillong</li>
-                      <li>2016 World Indoor Championship, Portland</li>
-                      <li>South Asian Games, Guwahati and Shillong</li>
-                      <li>2016 World Indoor Championship, Portland</li>
-                    </ul>
                   </div>
                   <div class="hero-detail-bottom">
                     <div class="share-txt-mob">Support</div>
@@ -175,17 +147,17 @@
                       <div class="back-btn text-uppercase">
                         &lt;&lt; back
                       </div>
-                      <div class="media-btn-mob">
+                      <div class="media-btn-mob media-show" data-mode="media" data-profileid="">
                         Media
                       </div>
                       <div class="socil-btn-mob">
                         <a href="#">
-                          <img src="img/fb-w.png">
+                          <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
                       <div class="socil-btn-mob">
                         <a href="#">
-                          <img src="img/fb-w.png">
+                          <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
                       </div>
                     </div>
@@ -208,17 +180,17 @@
                       <div class="back-btn text-uppercase">
                         &lt;&lt; back
                       </div>
-                      <div class="media-btn-mob">
-                        Media
+                      <div class="media-btn-mob profile-show" data-mode="profile" data-profileid="">
+                        Profile
                       </div>
                       <div class="socil-btn-mob">
                         <a href="#">
-                          <img src="img/fb-w.png">
+                          <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
                       <div class="socil-btn-mob">
                         <a href="#">
-                          <img src="img/fb-w.png">
+                          <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
                       </div>
                     </div>

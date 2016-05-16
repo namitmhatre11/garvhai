@@ -36,6 +36,7 @@ $(document).ready(function(){
 
 function playerFilterData(playerID){
 	if(playerID){
+		//$('.replace-filter-data').html('<img class="center-block" style="margin-top:50px;" src="'+baseUrl+'assets/img/loader.gif"/>');
 		$.ajax({
 	  		  url: baseUrl+"index.php/home/player_filter_data",
 	          type: 'POST',            
