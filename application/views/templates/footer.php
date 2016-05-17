@@ -1,3 +1,6 @@
+<div class="loader">
+  
+</div>
 <footer class="btm-footer">
       
     </footer>
@@ -54,6 +57,7 @@
         });
 
         $('.profile-btn').click(function(e){
+          $('body').addClass('loading');
           var lr= $(this).data('lr');
           var lb= $(this).data('tb');
           var playerId = $(this).data('playerid');
@@ -88,6 +92,7 @@
 		            }, 600);
 		        }
             showModalContent(playerId,playerMode);
+
           }
           function reomoveItem(){
             return $('.hero-detail-info').removeClass('right').removeClass('top').removeClass('bottom').removeClass('left');
@@ -143,6 +148,7 @@
                       }
                     }); 
                     $('.media-list-wrpr').html(mediaHtml);
+                    $('body').removeClass('loading');
                 }
               }
             }
