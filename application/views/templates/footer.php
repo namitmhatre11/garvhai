@@ -57,7 +57,6 @@
         });
 
         $('.profile-btn').click(function(e){
-          $('body').addClass('loading');
           var lr= $(this).data('lr');
           var lb= $(this).data('tb');
           var playerId = $(this).data('playerid');
@@ -148,7 +147,6 @@
                       }
                     }); 
                     $('.media-list-wrpr').html(mediaHtml);
-                    $('body').removeClass('loading');
                 }
               }
             }
