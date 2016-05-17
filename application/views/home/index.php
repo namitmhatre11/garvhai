@@ -91,6 +91,7 @@
                     </div>
                     <div class="hover-overlays"></div>
                     <div class="user-prof-wrpr text-center">
+                    <div class="close-overlay">&times;</div>
                       <div class="text-uppercase prof-name-wrpr"><?php echo $playerData['name']; ?></div>
                       <div class="profile-btn text-uppercase" data-lr="<?php echo $lr?>" data-tb="<?php echo $tb?>" data-playermode="profile" data-playerid="<?php echo $playerData['id']; ?>"><span class="anim-btn-bg"></span><span class="anim-btn-txt">profile</span></div>
                       <div class="profile-btn text-uppercase" data-lr="<?php echo $lr?>" data-tb="<?php echo $tb?>" data-playermode="videos" data-playerid="<?php echo $playerData['id']; ?>">videos & images</div>

@@ -2,6 +2,7 @@ $(document).ready(function(){
 	$('.filter-btn').click(function(e){
 		e.preventDefault();
 		e.stopPropagation();
+		$('body').addClass('loading');
 		var playerId = $("input[name='players']:checked").val();
 		if(playerId){
 			playerFilterData(playerId);
@@ -15,6 +16,7 @@ $(document).ready(function(){
 	$('#mobileFilter').change(function(e){
 		e.preventDefault();
 		e.stopPropagation();
+		$('body').addClass('loading');
 		var playerId = $(this).val();
 		if(playerId){
 			playerFilterData(playerId);
@@ -36,7 +38,6 @@ $(document).ready(function(){
 
 function playerFilterData(playerID){
 	if(playerID){
-		//$('.replace-filter-data').html('<img class="center-block" style="margin-top:50px;" src="'+baseUrl+'assets/img/loader.gif"/>');
 		$.ajax({
 	  		  url: baseUrl+"index.php/home/player_filter_data",
 	          type: 'POST',            
@@ -65,6 +66,7 @@ function playerFilterData(playerID){
 					}
 					$('.replace-filter-data').html(filterHtml);
 					$('.carousel-inner').html(modalInnerHtml);
+					$('body').removeClass('loading');
 				}
 	          }
 	        });
