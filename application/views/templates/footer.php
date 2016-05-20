@@ -117,6 +117,12 @@
         $('.profile-show').click(function(){
           showModalContent($(this).data('profileid'),$(this).data('mode'));
         });
+        $('.menu-btn').click(function(){
+          $('.main-nav').toggleClass('active');
+          $(this).find('.menu-btn-img').toggleClass('hidden');
+          $(this).find('.menu-close').toggleClass('hidden');
+
+        });
       });
 
       function showModalContent(playerId, playerMode){

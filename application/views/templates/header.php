@@ -39,9 +39,11 @@
         </div>
       </section>
       <section class="bottom-header-wrpr clearfix">
-        <div class="menu-btn pull-left"><img src="<?php echo base_url(); ?>assets/img/menu-btn.png"></div>
+        <div class="menu-btn pull-left">
+          <img src="<?php echo base_url(); ?>assets/img/menu-btn.png" class="menu-btn-img">
+          <img src="<?php echo base_url(); ?>assets/img/menu-close.png" class="menu-close hidden">
+        </div>
         <ul class="list-inline pull-right mob-menu-list">
-          <li><div class="search-btn"><img src="<?php echo base_url(); ?>assets/img/search-icon.png"></div></li>
           <li class="text-uppercase vid-img-links-mob"><a href="#">videos &amp; images</a></li>
           <li class="text-uppercase"><a href="#">media</a></li>
           <li><a href="#"><img src="<?php echo base_url(); ?>assets/img/adani.png"></a></li>
@@ -51,6 +53,13 @@
             <li class="logo-li"><a href="#">
             <img src="<?php echo base_url(); ?>assets/img/logo.png" class="img-responsive">
           </a></li>
+          <li class="search-wrpr-h search-wrpr-h-mob">
+              <form class="top-search-form">
+                <input type="text" class="search-inpt" placeholder="Search...">
+                <button class="search-btn"><img src="<?php echo base_url(); ?>assets/img/search-icon.png"></button>
+                <label class="animate-label"></label>
+              </form>
+            </li>
             <li ><a href="#" class="text-uppercase">players</a></li>
             <li><a href="#" class="text-uppercase">upcoming talent</a></li>
             <li><a href="#" class="text-uppercase">about</a></li>
