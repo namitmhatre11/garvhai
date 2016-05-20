@@ -220,8 +220,11 @@
                           <select id="mobileFilter">
                            <?php 
                             if(isset($records)){
-                              foreach($records as $playerData) { ?>
-                                <option value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
+                              foreach($records as $playerData) { 
+                                $optionSelected = '';
+                                if($playerData['id'] == '1'){ $optionSelected = 'selected="selected"'; }
+                                ?>
+                                <option <?php echo $optionSelected; ?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
                                 <?php }
                             } ?>
                           </select>
@@ -254,10 +257,12 @@
                               echo '<div class="col-sm-6 col-xs-12 hidden-small">
                                       <ul class="cust-inp-wrpr">';
                             }
+                            $radioChecked = '';
                             $count=$count+1;
+                            if($playerData['id'] == '1'){ $radioChecked = 'checked="checked"'; }
                             ?>
                                   <li>
-                                    <input type="radio" id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>">
+                                    <input type="radio" id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
                                       <label class="custom-radio text-uppercase" for="players_<?php echo $playerData['id'];?>">
                                         <?php echo $playerData['name'];?>
                                       </label>
