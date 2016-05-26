@@ -52,7 +52,7 @@
          if($(window).width()>=1007){
             $('.video-wrpr,.video-wrpr>img,.top-video-info').height($(window).height());
          }
-        $('.hero-detail-middle').mCustomScrollbar({
+        $('.hero-detail-middle,.media-list-wrpr-btm').mCustomScrollbar({
           theme:"dark"
         });
 

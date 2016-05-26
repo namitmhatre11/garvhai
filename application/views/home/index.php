@@ -324,6 +324,194 @@
         </div>
       </div>      
     </section>
+    <section class="about-wrpr">
+      <div class="about-inner">
+        <h2 class="about-title text-uppercase text-center">Our mission</h2>
+        <p class="about-discrb text-center">In a country that's brimming with potential, our sporting talent deserves much more support - both moral and financial. We need people cheering from the stands, we need facilities that enable our stars to perform at the top of their game. 
+At Adani, we have always believed in the power of sport in building the character of a nation and bringing it together. Which is why we felt it was our responsibility to do our bit for India on the biggest sporting stage of all - The Olympics. By supporting extremely talented sportspersons, we are working towards creating a sporting revolution in India. A revolution where each and every Indian stands up and proclaims - <span>#GarvHai</span></p>
+      </div>
+    </section>
+    <section class="contact-wrpr">
+      <h2 class="contact-title text-uppercase text-center">Share your experience</h2>
+      <form class="contact-form clearfix">
+        <div class="col-xs-12">
+          <div class="row">
+            <div class="col-sm-4 col-xs-12">
+              <div class="form-group">         
+                <div class="input-group">
+                  <label for="name-inp" class="input-group-addon"><i class="glyphicon glyphicon-user"></i></label>
+                  <input id="name-inp" type="text" class="form-control" placeholder="Name">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="form-group">         
+                <div class="input-group">
+                  <label for="email-inp" class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></label>
+                  <input id="email-inp" type="mail" class="form-control" placeholder="Mail">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-xs-12">
+              <div class="form-group">         
+                <div class="input-group">
+                  <label for="tel-inp" class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></label>
+                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="form-group">         
+                <div class="input-group input-group-text-area">
+                  <label for="comment-inp" class="input-group-addon"><i class="glyphicon glyphicon-comment"></i></label>
+                  <textarea id="comment-inp" class="form-control" placeholder="Comment"></textarea>
+                </div>
+              </div>
+              <div class="form-group">    
+                <button class="btn btn-submit center-block text-uppercase">submit</button>
+              </div>
+              <p class="email-txt text-center">
+                write us at <a href="mailto:adani@adani.com">adani@adani.com</a>
+              </p>  
+              <p class="abt-social-txt text-uppercase text-center">follow us on</p>
+               <div class="heros-social-links text-center">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-o.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-o.png"></a></li>
+                  </ul>
+                </div>           
+            </div>
+          </div>
+        </div>        
+      </form>        
+    </section>
+    <section class="players-schedule-wrpr">
+      <div class="ply-schd-inner clearfix">
+        <div class="row">
+          <div class="col-sm-5 col-xs-12">
+            <h2 class="athletes-act">Catch the athletes in action</h2>
+            <ul class="cust-inp-wrpr">
+              <li>
+                <input type="radio" id="schedule_1" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_1">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_2" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_2">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_3" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_3">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_4" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_4">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_5" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_5">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_6" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_6">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_7" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_7">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_8" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_8">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_9" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_9">INDERJEET SINGH</label>                                        
+              </li>
+              <li>
+                <input type="radio" id="schedule_10" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                <label class="custom-radio text-uppercase" for="schedule_10">INDERJEET SINGH</label>                                        
+              </li>
+            </ul>
+          </div>
+          <div class="col-sm-7 col-xs-12">
+            <div class="media-list-wrpr media-list-wrpr-btm">
+              <div class="media-item">
+                <div class="media-discrp">
+                  <div class="media-discrp-txt">
+                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
+                  </div>
+                  <div class="media-discrp-date">May 13, 2016</div>
+                </div>
+                <div class="media-social-icon">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-discrp">
+                  <div class="media-discrp-txt">
+                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
+                  </div>
+                  <div class="media-discrp-date">May 13, 2016</div>
+                </div>
+                <div class="media-social-icon">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-discrp">
+                  <div class="media-discrp-txt">
+                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
+                  </div>
+                  <div class="media-discrp-date">May 13, 2016</div>
+                </div>
+                <div class="media-social-icon">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-discrp">
+                  <div class="media-discrp-txt">
+                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
+                  </div>
+                  <div class="media-discrp-date">May 13, 2016</div>
+                </div>
+                <div class="media-social-icon">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="media-item">
+                <div class="media-discrp">
+                  <div class="media-discrp-txt">
+                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
+                  </div>
+                  <div class="media-discrp-date">May 13, 2016</div>
+                </div>
+                <div class="media-social-icon">
+                  <ul class="list-inline">
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
 <!-- Modal -->
 <div class="modal fade modal-light-box" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
