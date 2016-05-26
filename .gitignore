@@ -3,3 +3,4 @@ application/config/memcached.php
 application/config/database.php
 .htaccess
 .htpasswd
+uploads/
