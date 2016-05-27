@@ -369,6 +369,13 @@ At Adani, we have always believed in the power of sport in building the characte
                   <textarea id="comment-inp" class="form-control" placeholder="Comment"></textarea>
                 </div>
               </div>
+              <div class="form-group terms-check-wrpr text-center">
+                <h3 class="text-uppercase">Terms & Conditions</h3>
+                <div class="custom-check-wrpr">
+                  <input id="tnc-inp" type="checkbox">
+                  <label for="tnc-inp" class="text-uppercase">I hereby confirm that the details furnished above are mine and are true and correct to the best of my knowledge and belief. I have read the Privacy Policy & I authorize Garv Hai Website and its partners to call / email / SMS me for any further communication.</label>                  
+                </div>
+              </div>
               <div class="form-group">    
                 <button class="btn btn-submit center-block text-uppercase">submit</button>
               </div>
@@ -378,8 +385,8 @@ At Adani, we have always believed in the power of sport in building the characte
               <p class="abt-social-txt text-uppercase text-center">follow us on</p>
                <div class="heros-social-links text-center">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-o.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-o.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-o.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-o.png"></a></li>
                   </ul>
                 </div>           
             </div>
@@ -434,6 +441,20 @@ At Adani, we have always believed in the power of sport in building the characte
                 <label class="custom-radio text-uppercase" for="schedule_10">INDERJEET SINGH</label>                                        
               </li>
             </ul>
+            <div class="select-style">
+              <select id="mobileFilter">
+                <option selected="selected" value="1">Pinki Rani</option>
+                <option value="2">Sanjivani Jadhav</option>
+                <option value="3">Shiv Thapa</option>
+                <option value="4">Ankita Raina</option>
+                <option value="5">Mandeep Jangra</option>
+                <option value="6">Sanjivani Jadhav</option>
+                <option value="7">Khushbir Kaur</option>
+                <option value="8">Inderjeet Singh</option>
+                <option value="9">Pinki Rani</option>
+                <option value="10">Malaika Goel</option>
+              </select>
+            </div>
           </div>
           <div class="col-sm-7 col-xs-12">
             <div class="media-list-wrpr media-list-wrpr-btm">
@@ -446,8 +467,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -460,8 +481,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -474,8 +495,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -488,8 +509,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -502,8 +523,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="http://localhost/garvhai/assets/img/tw-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>

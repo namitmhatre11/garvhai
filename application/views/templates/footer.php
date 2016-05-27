@@ -2,8 +2,23 @@
   
 </div>
 <footer class="btm-footer">
-      
-    </footer>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 col-xs-12">
+        <p class="copy-txt">&copy; 2016 Adani Group</p>
+      </div>
+      <div class="col-sm-6 col-xs-12">
+        <nav class="footer-nav clearfix">
+          <ul class="nav navbar-nav navbar-right">           
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Legal disclaimer</a></li>                       
+            <li><a href="#">Terms of use</a></li>
+          </ul>
+        </nav>
+      </div>        
+    </div>
+  </div>      
+</footer>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="<?php echo base_url(); ?>assets/js/jquery-1.9.1.min.js"></script>
