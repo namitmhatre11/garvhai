@@ -62,7 +62,7 @@
             </li>
             <li ><a href="#" class="text-uppercase">players</a></li>
             <li><a href="#" class="text-uppercase">upcoming talent</a></li>
-            <li><a href="#" class="text-uppercase">about</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/home/about" class="text-uppercase">about garv hai</a></li>
             <li><a href="#" class="text-uppercase">contact</a></li>
             <li class="hidden-small search-wrpr-h">
               <form class="top-search-form">
