@@ -25,7 +25,7 @@
     <header class="main-header">
       <section class="top-header-wrpr clearfix">
         <div class="pull-left">
-          <a href="#">
+          <a href="<?php echo base_url(); ?>">
             <img src="<?php echo base_url(); ?>assets/img/logo.png" class="img-responsive">
           </a>
         </div>
@@ -33,8 +33,8 @@
           <ul class="list-inline">
             <li class="vid-img-links"><a href="#" class="text-uppercase upper-links">Videos & images</a></li>
             <li><a href="#" class="text-uppercase upper-links">Media</a></li>
-            <li class="tw-top-links"><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-            <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+            <li class="tw-top-links"><a href="https://www.facebook.com/AdaniOnline/" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+            <li><a href="https://twitter.com/AdaniOnline" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
           </ul>
         </div>
       </section>
@@ -60,7 +60,7 @@
                 <label class="animate-label"></label>
               </form>
             </li>
-            <li ><a href="#" class="text-uppercase">players</a></li>
+            <li ><a href="<?php echo base_url(); ?>#hero-wrpr" class="text-uppercase">players</a></li>
             <li><a href="#" class="text-uppercase">upcoming talent</a></li>
             <li><a href="<?php echo base_url(); ?>index.php/home/about" class="text-uppercase">about garv hai</a></li>
             <li><a href="#" class="text-uppercase">contact</a></li>

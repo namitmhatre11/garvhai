@@ -370,7 +370,7 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
               </div>
               <div class="form-group terms-check-wrpr text-center">
-                <h3 class="text-uppercase">Terms & Conditions</h3>
+                <h3 class="text-uppercase"><a href="<?php echo base_url(); ?>index.php/home/terms_condition">Terms & Conditions</a></h3>
                 <div class="custom-check-wrpr">
                   <input id="tnc-inp" type="checkbox">
                   <label for="tnc-inp" class="text-uppercase">I hereby confirm that the details furnished above are mine and are true and correct to the best of my knowledge and belief. I have read the Privacy Policy & I authorize Garv Hai Website and its partners to call / email / SMS me for any further communication.</label>                  
