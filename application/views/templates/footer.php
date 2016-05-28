@@ -37,6 +37,7 @@
 
             });
       var baseUrl = '<?php echo base_url() ?>';
+
       $(document).ready(function(){
         $('.close-overlay').click(function(){
           $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
@@ -138,7 +139,44 @@
           $(this).find('.menu-close').toggleClass('hidden');
 
         });
+        $('#share-exp').click(function(e){
+          /*e.stopPropagation();
+          e.preventDefault();*/
+          console.log('You started it!');
+          console.log($('textarea[id="comment-inp"]').val());
+          if($('input[id="tnc-inp"]').is(':checked')){
+            console.log('yehhh');
+            var name = $('input[id="name-inp"]').val();
+            var email = $('input[id="email-inp"]').val();
+            var mobile = $('input[id="tel-inp"]').val();
+            var cmnt = $('textarea[id="comment-inp"]').val();
+            if(name != "" && email != "" && mobile != "" && cmnt != ""){
+              console.log('chk this');
+              addShareExperience(name, email, mobile, cmnt);
+            }else{
+              alert('lost');
+            }
+          }else{
+            console.log('naaaah');
+          }
+        });
       });
+
+      function addShareExperience(name, email, mobile, cmnt){
+        $.ajax({
+            url: baseUrl+"index.php/home/share_experience_data",
+            type: 'POST',            
+            data: { 'name': name, 'email': email, 'mobile': mobile, 'cmnt': cmnt },
+            dataType: "json",
+            success: function(data){
+              /*if($.trim(JSON.stringify(data)) == "") {
+                alert(JSON.stringify(data));
+              }*/
+              console.log(JSON.stringify(data));
+              alert(JSON.stringify(data));
+            }
+        });
+      }
 
       function showModalContent(playerId, playerMode){
         if(playerId && playerMode){
@@ -149,6 +187,7 @@
             dataType: "json",
             success: function(data) {
               if($.trim(data) != "") {
+                console.log(data);
                 var mediaHtml = '';
                 if(playerMode == 'profile'){
                     $('.hero-detail-inner-media').addClass('hidden');

@@ -39,4 +39,17 @@ class Home_model extends CI_Model {
         //echo $this->db->last_query(); exit();
         return $query->result_array();
     }
+
+    public function user_share_data($upload_data)
+    {
+        $this->load->helper('url');
+        $data = array(
+            'user_name' => $upload_data['name'],
+            'email' => $upload_data['email'],
+            'mobile' => $upload_data['mobile'],
+            'comment' => $upload_data['cmnt']
+        );
+
+        return $this->db->insert('garvhai_users', $data);
+    }
 }

@@ -46,4 +46,44 @@
                 echo json_encode($data);
             }
         }
+
+        public function share_experience_data()
+        {
+            //print_r($this->input->post());
+            $data['name'] = $this->input->post('name');
+            $data['email'] = $this->input->post('email');
+            $data['mobile'] = $this->input->post('mobile');
+            $data['cmnt'] = $this->input->post('cmnt');
+
+            $response = $this->home_model->user_share_data($data);
+            if($response == true){
+                echo json_encode('Thank you for your response!');
+            }
+            //var_dump($response);exit;
+        }
+
+        public function about($page = 'about')
+        {
+        if ( ! file_exists(APPPATH.'views/home/'.$page.'.php'))
+        {
+            // Whoops, we don't have a page for that!
+            show_404();
+        }
+        $data['title'] = ucfirst($page); // Capitalize the first letter
+        $this->load->view('templates/header', $data);
+        $this->load->view('home/'.$page, $data);
+        $this->load->view('templates/footer', $data);
+        }
+        public function terms_condition($page = 'terms_condition')
+        {
+        if ( ! file_exists(APPPATH.'views/home/'.$page.'.php'))
+        {
+            // Whoops, we don't have a page for that!
+            show_404();
+        }
+        $data['title'] = ucfirst($page); // Capitalize the first letter
+        $this->load->view('templates/header', $data);
+        $this->load->view('home/'.$page, $data);
+        $this->load->view('templates/footer', $data);
+        }
     }

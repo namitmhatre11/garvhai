@@ -377,7 +377,8 @@ At Adani, we have always believed in the power of sport in building the characte
                 </div>
               </div>
               <div class="form-group">    
-                <button class="btn btn-submit center-block text-uppercase">submit</button>
+                <!-- <button id="share-exp" class="btn btn-submit center-block text-uppercase">submit</button> -->
+                <span style="width:80px;" id="share-exp" class="btn btn-submit center-block text-uppercase">submit</span>
               </div>
               <p class="email-txt text-center">
                 write us at <a href="mailto:adani@adani.com">adani@adani.com</a>

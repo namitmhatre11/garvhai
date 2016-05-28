@@ -97,7 +97,7 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .main-header .navbar-nav>li>a{font-family: 'rubriksemibold';font-size: 12px;margin-top: 7px;}
 .main-header .navbar-nav>li:last-child>a{margin-top: 0;}
 .bottom-header-wrpr .nav li+li{margin-left: 56px;}
-.bottom-header-wrpr .nav{background-color: #fff;padding: 11px 15px;position: relative;}
+.bottom-header-wrpr .nav{background-color: #fff;padding: 11px 9px;position: relative;}
 .main-nav{float: left;position: relative;}
 .bottom-header-wrpr .main-nav:before {width: 125px;content: '';height: 50px;position: absolute;right: -114px;background-image: url('../img/menu-before-bg.png');top: 0;background-repeat: no-repeat;}
 .top-header-wrpr ul li a{color: #fff;font-family: 'rubrikmedium';font-size: 10px;}
@@ -245,8 +245,10 @@ div.facebook  a.pp_close {right: 10px;top: -9px;width: 25px;height: 25px;backgro
 .about-inner{position: absolute;top: 50%;-webkit-transform: translateY(-50%);-moz-transform: translateY(-50%);-ms-transform: translateY(-50%);-o-transform: translateY(-50%);transform: translateY(-50%);max-width: 800px;width: 100%;margin: 0 auto;left: 0;right: 0;padding: 0 15px;}
 .about-title {color: #f90;text-align: center;font-size: 30px;font-family: 'rubrikmedium';margin-bottom: 30px;}
 .about-discrb{color: #fff;font-family: 'rubrikregular';font-size: 14px;line-height: 1.8;}
+.about-discrb1{color: #fff;font-family: 'rubrikregular';font-size: 16px;line-height: 1.8;}
 .about-discrb span{color: #ff6e02;font-family: 'rubrikmedium';}
 .contact-wrpr{padding: 0 15px;min-height: 550px;background-image: url('../img/contact-bg.png');background-size: contain;background-color: #304bb2;background-repeat: no-repeat;background-size: cover;background-position: bottom left;}
+.contact-wrpr1{padding: 0 15px;min-height: 550px;margin-top: -146px;background-image: url('../img/contact-bg.png');background-size: contain;background-color: #304bb2;background-repeat: repeat-y;background-size: cover;background-position: bottom left;}
 .contact-wrpr .contact-form .input-group .form-control{border: 0 !important;border-radius: 0;box-shadow: none;height: 40px;background-color: transparent;color: #a7a5a2;font-size: 14px;}
 .contact-wrpr .contact-form .form-group{margin-bottom: 35px;}
 .contact-wrpr .contact-form .input-group-addon{border: 0;border-radius: 0;background-color: #f90;}
