@@ -2,7 +2,7 @@
   <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=0;rel-0&amp;showinfo0" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
       </div>
       <div class="top-video-info">
         <div>
