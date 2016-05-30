@@ -101,12 +101,12 @@
               $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
               $(this).parents('.heros-list').find('.hover-overlays').show();
               $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
-              showModalContent(playerId,playerMode);
+              showModalContent(playerId,playerMode,'media-list-wrpr');
             }else{
               $('.hero-detail-info').addClass('hidden');
               $(this).parents('.heros-list').find('.hover-overlays').hide();
-              $('.cust-inp-wrpr').find('input').prop('checked',false);
-              $('.cust-inp-wrpr').find('input[value='+playerId+']').prop('checked',true);
+              $('.col-sm-6 .cust-inp-wrpr').find('input').prop('checked',false);
+              $('.cust-inp-wrpr').find('input[id="players_'+playerId+'"]').prop('checked',true);
               $('body').addClass('loading');
               playerFilterData(playerId);
               $("body, html").animate({
@@ -146,27 +146,44 @@
 
         });
         $('#share-exp').click(function(e){
-          /*e.stopPropagation();
-          e.preventDefault();*/
-          console.log('You started it!');
-          console.log($('textarea[id="comment-inp"]').val());
+          /*e.stopPropagation();*/
+          e.preventDefault();
+          var alertModal = $('#alertModal');
           if($('input[id="tnc-inp"]').is(':checked')){
-            console.log('yehhh');
-            var name = $('input[id="name-inp"]').val();
-            var email = $('input[id="email-inp"]').val();
-            var mobile = $('input[id="tel-inp"]').val();
-            var cmnt = $('textarea[id="comment-inp"]').val();
-            if(name != "" && email != "" && mobile != "" && cmnt != ""){
-              console.log('chk this');
+            var name = $('#name-inp').val();
+            var email = validateEmail($('#email-inp').val());
+            var mobile = $('#tel-inp').val();
+            var cmnt = $('#comment-inp').val();
+            if(name == "" && $('#email-inp').val() == "" && mobile == "" && cmnt == ""){
+              alertModal.find('.replace-content').text('All fields are required.');
+              alertModal.modal('show');
+            }else if(name != "" && email != "" && mobile != "" && cmnt != ""){
               addShareExperience(name, email, mobile, cmnt);
+            }else if(name == "" && email == false && mobile == "" && cmnt == ""){
+              alertModal.find('.replace-content').text('Please enter valid email-id.');
+              alertModal.modal('show');
             }else{
-              alert('lost');
+              alertModal.find('.replace-content').text('Please fill other fields also.');
+              alertModal.modal('show');
             }
           }else{
-            console.log('naaaah');
+            alertModal.find('.replace-content').text('You must agree to our Terms & Conditions.');
+            alertModal.modal('show');
           }
         });
+
+        $('input[name="adaniplayers"]').change(function(){
+          alert('hi');
+          var playerId = $(this).val();
+          alert(playerId);
+          showModalContent(playerId,'media', 'media-list-wrpr-dwn');
+        });
       });
+
+      function validateEmail(email) {
+          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email);
+      }
 
       function addShareExperience(name, email, mobile, cmnt){
         $.ajax({
@@ -175,16 +192,13 @@
             data: { 'name': name, 'email': email, 'mobile': mobile, 'cmnt': cmnt },
             dataType: "json",
             success: function(data){
-              /*if($.trim(JSON.stringify(data)) == "") {
-                alert(JSON.stringify(data));
-              }*/
-              console.log(JSON.stringify(data));
-              alert(JSON.stringify(data));
+              $('#alertModal').find('.replace-content').text(JSON.stringify(data));
+              $('#alertModal').modal('show');
             }
         });
       }
 
-      function showModalContent(playerId, playerMode){
+      function showModalContent(playerId, playerMode, divToReplace){
         if(playerId && playerMode){
           $.ajax({
             url: baseUrl+"index.php/home/player_model_data",
@@ -193,11 +207,12 @@
             dataType: "json",
             success: function(data) {
               if($.trim(data) != "") {
-                console.log(data);
                 var mediaHtml = '';
                 if(playerMode == 'profile'){
                     $('.hero-detail-inner-media').addClass('hidden');
                     $('.hero-detail-inner-profile').removeClass('hidden');
+                    $('.hero-achive-name').text(data.modal_data[0].name);
+                    $('#hero-support-name').text('Support '+data.modal_data[0].name);
                     mediaHtml += '<div class="hero-detail-middle-name text-uppercase">'+data.modal_data[0].name+'</div>'+data.modal_data[0].contest+'<br />'+data.modal_data[0].championship;
                     $('#profileReplaceData').html(mediaHtml);
                 }else if(playerMode == 'videos'){
@@ -209,10 +224,10 @@
                     $.each( data, function( index, mediaValue ) { 
                       for(var i=0; i<mediaValue.length; i++){
                         var published_date = converter(mediaValue[i].published_date);
-                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt">'+mediaValue[i].description+'</div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
+                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
                       }
                     }); 
-                    $('.media-list-wrpr').html(mediaHtml);
+                    $('.'+divToReplace).html(mediaHtml);
                 }
               }
             }

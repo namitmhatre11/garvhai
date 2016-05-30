@@ -1,9 +1,9 @@
   <?php //echo '<pre>';   print_r($records); exit(); ?>
   <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
-      <div class="embed-responsive embed-responsive-16by9">
+      <!-- <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
-      </div>
+      </div> -->
       <div class="top-video-info">
         <div>
           <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
@@ -122,7 +122,7 @@
                         </div>
                       </div>
                       <div class="hero-detail-social-icon text-center">
-                        <div>Support Inderjeet</div>
+                        <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">
                           <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
@@ -348,7 +348,7 @@
               <div class="form-group">         
                 <div class="input-group">
                   <label for="tel-inp" class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></label>
-                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile">
+                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile" minlength="10" maxlength="10">
                 </div>
               </div>
             </div>
@@ -423,69 +423,20 @@
             </div>
           </div>
           <div class="col-sm-7 col-xs-12">
-            <div class="media-list-wrpr media-list-wrpr-btm">
+            <div class="media-list-wrpr-dwn media-list-wrpr-btm">
               <div class="media-item">
                 <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
-                  </div>
-                  <div class="media-discrp-date">May 13, 2016</div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="media-item">
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
-                  </div>
-                  <div class="media-discrp-date">May 13, 2016</div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="media-item">
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
-                  </div>
-                  <div class="media-discrp-date">May 13, 2016</div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="media-item">
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
-                  </div>
-                  <div class="media-discrp-date">May 13, 2016</div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
-                </div>
-              </div>
-              <div class="media-item">
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p>The trailer of Madaari, starring Irrfan Khan, has been released and the actor once again leaves an indelible impact on his viewers, with his sheer acting prowess.</p>
-                  </div>
-                  <div class="media-discrp-date">May 13, 2016</div>
+                  <?php
+                    $mediacount = 0;
+                    foreach ($mediaRecords as $media) {
+                  ?>
+                    <div class="media-discrp-txt">
+                      <p><a href="<?php echo $media['link'];?>"><?php echo $media['media_value'];?></a></p>
+                    </div>
+                    <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
+                  <?php
+                    }
+                  ?>
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
@@ -545,5 +496,23 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
+
+
+<!-- Modal -->
+  <div class="modal fade" id="alertModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body replace-content">
+          <p></p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
    

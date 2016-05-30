@@ -16,6 +16,7 @@
 
             $data['records'] = $this->home_model->get_player_data();
             $data['videoRecords'] = $this->home_model->get_player_video();
+            $data['mediaRecords'] = $this->home_model->get_player_modal_data('media', 1);
            // echo '<pre>';   print_r($data['records']); exit();
             $this->load->view('templates/header', $data);
             $this->load->view('home/index', $data);
