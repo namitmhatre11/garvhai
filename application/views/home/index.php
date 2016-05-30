@@ -92,8 +92,8 @@
                       <div class="text-uppercase supp-ply-txt">support player</div>
                       <div class="heros-social-links">
                         <ul class="list-inline">
-                          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -124,8 +124,8 @@
                       <div class="hero-detail-social-icon text-center">
                         <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">
-                          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -145,12 +145,12 @@
                         Media
                       </div>
                       <div class="socil-btn-mob">
-                        <a href="#">
+                        <a href="https://www.facebook.com/AdaniOnline/">
                           <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
                       <div class="socil-btn-mob">
-                        <a href="#">
+                        <a href="https://twitter.com/AdaniOnline">
                           <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
                       </div>
@@ -178,12 +178,12 @@
                         Profile
                       </div>
                       <div class="socil-btn-mob">
-                        <a href="#">
+                        <a href="https://www.facebook.com/AdaniOnline/">
                           <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
                       <div class="socil-btn-mob">
-                        <a href="#">
+                        <a href="https://twitter.com/AdaniOnline">
                           <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
                       </div>
@@ -255,7 +255,7 @@
                             if($playerData['id'] == '1'){ $radioChecked = 'checked="checked"'; }
                             ?>
                                   <li>
-                                    <input type="radio" id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                                    <input type="radio" <?php echo $radioChecked;?> id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>">
                                       <label class="custom-radio text-uppercase" for="players_<?php echo $playerData['id'];?>">
                                         <?php echo $playerData['name'];?>
                                       </label>
@@ -378,8 +378,8 @@
               <p class="abt-social-txt text-uppercase text-center">follow us on</p>
                <div class="heros-social-links text-center">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-o.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-o.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-o.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-o.png"></a></li>
                   </ul>
                 </div>           
             </div>
@@ -393,59 +393,32 @@
           <div class="col-sm-5 col-xs-12">
             <h2 class="athletes-act">Catch the athletes in action</h2>
             <ul class="cust-inp-wrpr">
-              <li>
-                <input type="radio" id="schedule_1" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_1">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_2" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_2">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_3" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_3">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_4" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_4">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_5" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_5">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_6" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_6">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_7" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_7">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_8" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_8">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_9" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_9">INDERJEET SINGH</label>                                        
-              </li>
-              <li>
-                <input type="radio" id="schedule_10" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
-                <label class="custom-radio text-uppercase" for="schedule_10">INDERJEET SINGH</label>                                        
-              </li>
+            <?php
+              if(isset($records)){
+                foreach($records as $playerData) {
+                  $radChecked = $playerData['id'] == 1 ? $radChecked = 'checked="checked"' : $radChecked = '';
+            ?>
+                  <li>
+                    <input type="radio" id="schedule_<?php echo $playerData['id'];?>" name="adaniplayers" value="<?php echo $playerData['id'];?>" <?php echo $radChecked;?>>
+                    <label class="custom-radio text-uppercase" for="schedule_<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></label>
+                  </li>
+            <?php
+                }
+              }
+            ?>
             </ul>
             <div class="select-style">
               <select id="mobileFilter">
-                <option selected="selected" value="1">Pinki Rani</option>
-                <option value="2">Sanjivani Jadhav</option>
-                <option value="3">Shiv Thapa</option>
-                <option value="4">Ankita Raina</option>
-                <option value="5">Mandeep Jangra</option>
-                <option value="6">Sanjivani Jadhav</option>
-                <option value="7">Khushbir Kaur</option>
-                <option value="8">Inderjeet Singh</option>
-                <option value="9">Pinki Rani</option>
-                <option value="10">Malaika Goel</option>
+              <?php
+                if(isset($records)){
+                  foreach($records as $playerData) {
+                    $dropSelect = $playerData['id'] == 1 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
+              ?>
+                <option <?php echo $dropSelect;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
+              <?php
+                  }
+                }
+              ?>
               </select>
             </div>
           </div>
@@ -460,8 +433,8 @@
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -474,8 +447,8 @@
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -488,8 +461,8 @@
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -502,8 +475,8 @@
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -516,8 +489,8 @@
                 </div>
                 <div class="media-social-icon">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                   </ul>
                 </div>
               </div>
@@ -565,8 +538,8 @@
       <div class="modal-footer">
         <div class="heros-social-links">
         <ul class="list-inline">
-          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-          <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
         </ul>
       </div>
       </div>
