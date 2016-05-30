@@ -348,7 +348,7 @@
               <div class="form-group">         
                 <div class="input-group">
                   <label for="tel-inp" class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></label>
-                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile">
+                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile" minlength="10" maxlength="10">
                 </div>
               </div>
             </div>

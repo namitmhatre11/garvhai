@@ -150,40 +150,30 @@
           e.preventDefault();
           var alertModal = $('#alertModal');
           if($('input[id="tnc-inp"]').is(':checked')){
-            console.log('yehhh');
             var name = $('#name-inp').val();
             var email = validateEmail($('#email-inp').val());
             var mobile = $('#tel-inp').val();
             var cmnt = $('#comment-inp').val();
-            var target = '';
-            if(name == "" && email == "" && mobile == "" && cmnt == ""){
-              alertModal.find('.replace-content').text('Please all fields are required.');
+            if(name == "" && $('#email-inp').val() == "" && mobile == "" && cmnt == ""){
+              alertModal.find('.replace-content').text('All fields are required.');
+              alertModal.modal('show');
+            }else if(name != "" && email != "" && mobile != "" && cmnt != ""){
+              addShareExperience(name, email, mobile, cmnt);
+            }else if(name == "" && email == false && mobile == "" && cmnt == ""){
+              alertModal.find('.replace-content').text('Please enter valid email-id.');
+              alertModal.modal('show');
+            }else{
+              alertModal.find('.replace-content').text('Please fill other fields also.');
               alertModal.modal('show');
             }
-            else if($('#user_name').val() == '' && $('#email_id').val() != ''){
-              alert("Please enter name.");
-              return false;
-            }else if($('#user_name').val() != '' && $('#email_id').val() == ''){
-              alert("Please enter email.");
-              return false;
-            }
-
-            if(name != "" && email != "" && mobile != "" && cmnt != ""){
-              console.log('chk this');
-              addShareExperience(name, email, mobile, cmnt);
-            }else{
-              alert('lost');
-            }
           }else{
-            alertModal.find('.replace-content').text('Please agree our terms and conditions to process further.');
+            alertModal.find('.replace-content').text('You must agree to our Terms & Conditions.');
             alertModal.modal('show');
           }
         });
       });
 
       function validateEmail(email) {
-        console.log('You started it!');
-
           var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
           return re.test(email);
       }
@@ -195,11 +185,8 @@
             data: { 'name': name, 'email': email, 'mobile': mobile, 'cmnt': cmnt },
             dataType: "json",
             success: function(data){
-              /*if($.trim(JSON.stringify(data)) == "") {
-                alert(JSON.stringify(data));
-              }*/
-              console.log(JSON.stringify(data));
-              alert(JSON.stringify(data));
+              $('#alertModal').find('.replace-content').text(JSON.stringify(data));
+              $('#alertModal').modal('show');
             }
         });
       }
