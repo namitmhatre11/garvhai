@@ -173,9 +173,7 @@
         });
 
         $('input[name="adaniplayers"]').change(function(){
-          alert('hi');
           var playerId = $(this).val();
-          alert(playerId);
           showModalContent(playerId,'media', 'media-list-wrpr-dwn');
         });
       });
@@ -224,7 +222,7 @@
                     $.each( data, function( index, mediaValue ) { 
                       for(var i=0; i<mediaValue.length; i++){
                         var published_date = converter(mediaValue[i].published_date);
-                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
+                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'" target="blank">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
                       }
                     }); 
                     $('.'+divToReplace).html(mediaHtml);

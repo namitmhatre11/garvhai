@@ -1,9 +1,9 @@
   <?php //echo '<pre>';   print_r($records); exit(); ?>
   <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
-      <!-- <div class="embed-responsive embed-responsive-16by9">
+      <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
-      </div> -->
+      </div>
       <div class="top-video-info">
         <div>
           <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
@@ -78,7 +78,7 @@
                   ?> 
 
                   <div class="col-xs-4 col-xs-20 overlay-wrpr">
-                    <div class="heros-name text-uppercase"><?php echo $playerData['name']; ?></div>
+                    <!-- <div class="heros-name text-uppercase"><?php echo $playerData['name']; ?></div> -->
                     <div class="row">
                       <img src="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" class="full-width-img">
                     </div>
@@ -431,7 +431,7 @@
                     foreach ($mediaRecords as $media) {
                   ?>
                     <div class="media-discrp-txt">
-                      <p><a href="<?php echo $media['link'];?>"><?php echo $media['media_value'];?></a></p>
+                      <p><a href="<?php echo $media['link'];?>" target="blank"><?php echo $media['media_value'];?></a></p>
                     </div>
                     <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
                   <?php
