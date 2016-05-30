@@ -146,16 +146,28 @@
 
         });
         $('#share-exp').click(function(e){
-          /*e.stopPropagation();
-          e.preventDefault();*/
-          console.log('You started it!');
-          console.log($('textarea[id="comment-inp"]').val());
+          /*e.stopPropagation();*/
+          e.preventDefault();
+          var alertModal = $('#alertModal');
           if($('input[id="tnc-inp"]').is(':checked')){
             console.log('yehhh');
-            var name = $('input[id="name-inp"]').val();
-            var email = $('input[id="email-inp"]').val();
-            var mobile = $('input[id="tel-inp"]').val();
-            var cmnt = $('textarea[id="comment-inp"]').val();
+            var name = $('#name-inp').val();
+            var email = validateEmail($('#email-inp').val());
+            var mobile = $('#tel-inp').val();
+            var cmnt = $('#comment-inp').val();
+            var target = '';
+            if(name == "" && email == "" && mobile == "" && cmnt == ""){
+              alertModal.find('.replace-content').text('Please all fields are required.');
+              alertModal.modal('show');
+            }
+            else if($('#user_name').val() == '' && $('#email_id').val() != ''){
+              alert("Please enter name.");
+              return false;
+            }else if($('#user_name').val() != '' && $('#email_id').val() == ''){
+              alert("Please enter email.");
+              return false;
+            }
+
             if(name != "" && email != "" && mobile != "" && cmnt != ""){
               console.log('chk this');
               addShareExperience(name, email, mobile, cmnt);
@@ -163,10 +175,18 @@
               alert('lost');
             }
           }else{
-            console.log('naaaah');
+            alertModal.find('.replace-content').text('Please agree our terms and conditions to process further.');
+            alertModal.modal('show');
           }
         });
       });
+
+      function validateEmail(email) {
+        console.log('You started it!');
+
+          var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          return re.test(email);
+      }
 
       function addShareExperience(name, email, mobile, cmnt){
         $.ajax({
@@ -198,6 +218,8 @@
                 if(playerMode == 'profile'){
                     $('.hero-detail-inner-media').addClass('hidden');
                     $('.hero-detail-inner-profile').removeClass('hidden');
+                    $('.hero-achive-name').text(data.modal_data[0].name);
+                    $('#hero-support-name').text('Support '+data.modal_data[0].name);
                     mediaHtml += '<div class="hero-detail-middle-name text-uppercase">'+data.modal_data[0].name+'</div>'+data.modal_data[0].contest+'<br />'+data.modal_data[0].championship;
                     $('#profileReplaceData').html(mediaHtml);
                 }else if(playerMode == 'videos'){
