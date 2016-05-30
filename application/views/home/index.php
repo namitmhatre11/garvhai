@@ -122,7 +122,7 @@
                         </div>
                       </div>
                       <div class="hero-detail-social-icon text-center">
-                        <div>Support Inderjeet</div>
+                        <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">
                           <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
@@ -348,7 +348,7 @@
               <div class="form-group">         
                 <div class="input-group">
                   <label for="tel-inp" class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></label>
-                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile">
+                  <input id="tel-inp" type="tel" class="form-control" placeholder="Mobile" minlength="10" maxlength="10">
                 </div>
               </div>
             </div>
@@ -545,5 +545,23 @@
       </div>
     </div>
   </div>
-</div>
+</div> 
+
+
+<!-- Modal -->
+  <div class="modal fade" id="alertModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body replace-content">
+          <p></p>
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
    
