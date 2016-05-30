@@ -255,7 +255,7 @@
                             if($playerData['id'] == '1'){ $radioChecked = 'checked="checked"'; }
                             ?>
                                   <li>
-                                    <input type="radio" id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                                    <input type="radio" <?php echo $radioChecked;?> id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>">
                                       <label class="custom-radio text-uppercase" for="players_<?php echo $playerData['id'];?>">
                                         <?php echo $playerData['name'];?>
                                       </label>
@@ -396,10 +396,10 @@
             <?php
               if(isset($records)){
                 foreach($records as $playerData) {
-                  $radioChecked = $playerData['id'] == 1 ? $radioChecked = 'checked="checked"' : $radioChecked = '';
+                  $radChecked = $playerData['id'] == 1 ? $radChecked = 'checked="checked"' : $radChecked = '';
             ?>
                   <li>
-                    <input type="radio" id="schedule_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>" <?php echo $radioChecked;?>>
+                    <input type="radio" id="schedule_<?php echo $playerData['id'];?>" name="adaniplayers" value="<?php echo $playerData['id'];?>" <?php echo $radChecked;?>>
                     <label class="custom-radio text-uppercase" for="schedule_<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></label>
                   </li>
             <?php
@@ -414,7 +414,7 @@
                   foreach($records as $playerData) {
                     $dropSelect = $playerData['id'] == 1 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
               ?>
-                <option <?php echo $radioChecked;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
+                <option <?php echo $dropSelect;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
               <?php
                   }
                 }
