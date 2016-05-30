@@ -71,10 +71,7 @@
           var playerId = $(this).data('playerid');
           var playerMode = $(this).data('playermode');
           $('.media-btn-mob').data('profileid',playerId);
-  	      $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
-          $(this).parents('.heros-list').find('.hover-overlays').show();
-          $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
-          if(playerId && playerMode){
+  	      if(playerId && playerMode){
 	          $('.hero-detail-info').removeClass('hidden').css({'left':lr})
 	          if($(window).width()>1006){
     				    switch(lb){
@@ -99,7 +96,20 @@
 		                scrollTop: $("#hero-wrpr").offset().top
 		            }, 600);
 		        }
-            showModalContent(playerId,playerMode);
+
+            if(playerMode != 'videos'){
+              $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
+              $(this).parents('.heros-list').find('.hover-overlays').show();
+              $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
+              showModalContent(playerId,playerMode);
+            }else{
+              $('.hero-detail-info').addClass('hidden');
+              $(this).parents('.heros-list').find('.hover-overlays').hide();
+              $('.cust-inp-wrpr').find('input').prop('checked',false);
+              $('.cust-inp-wrpr').find('input[value='+playerId+']').prop('checked',true);
+              $('body').addClass('loading');
+              playerFilterData(playerId);
+            }
 
           }
           function reomoveItem(){
