@@ -41,7 +41,6 @@
               $tb="";
               if(isset($records)){
                 foreach($records as $playerData) {
-                  if($count<=8){
                   switch ($count) {
                     case '1':
                       $lr="25%";
@@ -101,8 +100,7 @@
                   </div>
                 <?php 
                   $count++;
-                } 
-              }
+               }
               } ?>
               <div class="col-xs-40 col-xs-4 hero-detail-info hidden">
                 <div class="hero-detail-inner hero-detail-inner-profile hidden">
@@ -263,7 +261,7 @@
                                       </label>
                                   </li>
                           <?php 
-                              if($count == 5){
+                              if($count == 4){
                                 echo '</ul>';
                                   if($loopCount == 1){
                                     echo '<div class="btn filter-btn text-uppercase btn-default">
