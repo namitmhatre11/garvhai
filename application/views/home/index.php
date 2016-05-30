@@ -378,8 +378,8 @@
               <p class="abt-social-txt text-uppercase text-center">follow us on</p>
                <div class="heros-social-links text-center">
                   <ul class="list-inline">
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-o.png"></a></li>
-                    <li><a href="#" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-o.png"></a></li>
+                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-o.png"></a></li>
+                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-o.png"></a></li>
                   </ul>
                 </div>           
             </div>
