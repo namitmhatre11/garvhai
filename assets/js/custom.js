@@ -44,7 +44,7 @@ $(document).ready(function(){
       $("a[data-href='#hero-wrpr']").parent('li').addClass("nav-active");
       setTimeout(function(){$('body').removeClass('scroll-active');}, 800);
     });
-    $('#topNav .nav li a').click(function(e){
+    $('#topNav .nav li .page-scroll').click(function(e){
       e.preventDefault(); 
     	var self=$(this)
       $('body').addClass('scroll-active');

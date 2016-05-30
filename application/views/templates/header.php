@@ -79,8 +79,8 @@
                 <label class="animate-label"></label>
               </form>
             </li>
-            <li class="socail-li"><a href="#"><img src="<?php echo base_url(); ?>assets/img/fb-b.png"></a></li>
-            <li class="socail-li"><a href="#"><img src="<?php echo base_url(); ?>assets/img/tw-b.png"></a></li>                                 
+            <li class="socail-li"><a href="https://www.facebook.com/AdaniOnline/" target="blank"><img src="<?php echo base_url(); ?>assets/img/fb-b.png"></a></li>
+            <li class="socail-li"><a href="https://twitter.com/AdaniOnline" target="blank"><img src="<?php echo base_url(); ?>assets/img/tw-b.png"></a></li>                                 
           </ul>
         </nav>
       </section>

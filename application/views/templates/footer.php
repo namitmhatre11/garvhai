@@ -109,6 +109,9 @@
               $('.cust-inp-wrpr').find('input[value='+playerId+']').prop('checked',true);
               $('body').addClass('loading');
               playerFilterData(playerId);
+              $("body, html").animate({
+                    scrollTop: $("#heros-gellary").offset().top-40
+                }, 600);
             }
 
           }
