@@ -424,27 +424,27 @@
           </div>
           <div class="col-sm-7 col-xs-12">
             <div class="media-list-wrpr-dwn media-list-wrpr-btm">
-              <div class="media-item">
                 <?php
                   $mediacount = 0;
                   foreach ($mediaRecords as $media) {
                 ?>
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p><a href="<?php echo $media['link'];?>" target="blank"><?php echo $media['media_value'];?></a></p>
+                <div class="media-item">
+                  <div class="media-discrp">
+                    <div class="media-discrp-txt">
+                      <p><a href="<?php echo $media['link'];?>" target="blank"><?php echo $media['description'];?></a></p>
+                    </div>
+                    <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
                   </div>
-                  <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
+                  <div class="media-social-icon">
+                    <ul class="list-inline">
+                      <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                      <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    </ul>
+                  </div>
                 </div>
                 <?php
                   }
                 ?>
-              </div>
             </div>
           </div>
         </div>
