@@ -121,7 +121,7 @@ function playerFilterData(playerID){
 		          				filterHtml += '<div class="col-xs-4 col-xs-20 light-box-wrpr"><div class="row">';
 		          				if(filterValue[i].type == 'image'){
 		          					filterHtml += '<a><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'" class="full-width-img"><div class="light-box-overlay image-overlay" data-id="'+filterValue[i].id+'"></div></a>';
-		          					modalInnerHtml += '<div class="item" id="modalImg_'+filterValue[i].id+'"><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'"></div>';
+		          					modalInnerHtml += '<div class="item" id="modalImg_'+filterValue[i].id+'"><img src="'+baseUrl+'uploads/'+filterValue[i].media_value.split('.', 1)+'-l.jpg"></div>';
 		          				}else if(filterValue[i].type == 'video'){
 		          					filterHtml += '<a href="#"><img src="'+baseUrl+'uploads/'+filterValue[i].video_thumbnail+'" class="full-width-img"><div class="light-box-overlay video-overlay" data-id="'+filterValue[i].id+'"></div></a>';
 		          					modalInnerHtml += '<div class="item" id="modalImg_'+filterValue[i].id+'"><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item" src="'+filterValue[i].media_value+'" frameborder="0" allowfullscreen></iframe></div></div>';

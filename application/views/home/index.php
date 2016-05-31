@@ -461,9 +461,11 @@
             <div class="carousel-inner" role="listbox">
         <?php if(isset($videoRecords)){
                   foreach($videoRecords as $videoData) { 
-                      if($videoData['type'] == 'image') { ?>
+                      if($videoData['type'] == 'image') { 
+                          $imgnm = explode('.', $videoData['media_value']);
+                        ?>
                         <div class="item" id="modalImg_<?php echo $videoData['id']; ?>">
-                          <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>">
+                          <img src="<?php echo base_url(); ?>uploads/<?php echo $imgnm[0].'-l.jpg'; ?>">
                         </div>
                        <?php }else if($videoData['type'] == 'video') { ?>
                           <div class="item" id="modalImg_<?php echo $videoData['id']; ?>" >
