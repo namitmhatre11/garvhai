@@ -286,7 +286,8 @@ div.facebook  a.pp_close {right: 10px;top: -9px;width: 25px;height: 25px;backgro
 .terms-check-wrpr label:after{position: absolute;width: 23px;height: 23px;border: 1px solid #8e90a0;content: '';left: -38px;top: 0;padding-top: 2px;font-size: 14px;}
 .terms-check-wrpr input[type="checkbox"]:checked+label:after{content: "\e013";font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;}
 .terms-check-wrpr input[type="checkbox"],.ply-schd-inner .select-style{display: none;}
-.video-wrpr .embed-responsive{min-height: 100%;}
+.video-wrpr .embed-responsive{min-height: 100%;max-height: 100%;overflow: hidden;}
+#video-wrpr{overflow: hidden;}
 .media-discrp-txt p a, .media-discrp-txt a{color:#000;}
 #about, #contact, #media{min-height:100%;}
 .modal-backdrop.in{opacity: 0.8;}
