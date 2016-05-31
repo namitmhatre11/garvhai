@@ -465,7 +465,7 @@
                           $imgnm = explode('.', $videoData['media_value']);
                         ?>
                         <div class="item" id="modalImg_<?php echo $videoData['id']; ?>">
-                          <img src="<?php echo base_url(); ?>uploads/<?php echo $imgnm[0].'-l.jpg'; ?>">
+                          <img src="<?php echo base_url(); ?>uploads/<?php echo $imgnm[0].'-l.jpg'; ?>" class="full-width-img">
                         </div>
                        <?php }else if($videoData['type'] == 'video') { ?>
                           <div class="item" id="modalImg_<?php echo $videoData['id']; ?>" >
