@@ -8,6 +8,13 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Garvhai</title>
 
+    <meta property="og:url"           content="http://uat.sodelsolutions.com/garvhai" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="Garvhai" />
+    <meta property="og:description"   content="Proud to support Inderjeet Singh in the Rio Olympics 2016. #GarvHai" />
+    <meta property="og:image"         content="http://uat.sodelsolutions.com/garvhai/uploads/Indrajeet-Singh81.jpg" />
+
+
     <!-- Bootstrap -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
