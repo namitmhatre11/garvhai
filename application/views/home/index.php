@@ -1,5 +1,4 @@
-  <?php //echo '<pre>';   print_r($records); exit(); ?>
-  <section id="video-wrpr" class="clearfix">
+   <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
@@ -42,6 +41,10 @@
               $tb="";
               if(isset($records)){
                 foreach($records as $playerData) {
+                  $title=urlencode('Garvhai');
+                  $url= urlencode('http://uat.sodelsolutions.com/garvhai/');
+                  $summary=urlencode("Proud to support ".$playerData['name']." in the Rio Olympics 2016. #GarvHai");
+                  $image=urlencode('http://uat.sodelsolutions.com/garvhai/assets/img/logo.png');
                   switch ($count) {
                     case '1':
                       $lr="25%";
@@ -93,8 +96,8 @@
                       <div class="text-uppercase supp-ply-txt">support player</div>
                       <div class="heros-social-links">
                         <ul class="list-inline">
-                          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                          <li><a onClick="window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=<?php echo $title;?>&amp;p[summary]=<?php echo $summary;?>&amp;p[url]=<?php echo $url; ?>&amp;p[images][0]=<?php echo $image;?>','sharer','toolbar=0,status=0,width=550,height=300');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                          <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'Proud to support <?php echo $playerData['name'] ?> in the Rio Olympics 2016. \' via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -125,8 +128,8 @@
                       <div class="hero-detail-social-icon text-center">
                         <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">
-                          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                          <li><a href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                          <li><a href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -150,7 +153,7 @@
                           <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
-                      <div class="socil-btn-mob">
+                      <div class="socil-btn-mob socil-btn-mob-tw">
                         <a href="https://twitter.com/AdaniOnline">
                           <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
@@ -183,7 +186,7 @@
                           <img src="<?php echo base_url(); ?>assets/img/fb-w.png">
                         </a>
                       </div>
-                      <div class="socil-btn-mob">
+                      <div class="socil-btn-mob socil-btn-mob-tw">
                         <a href="https://twitter.com/AdaniOnline">
                           <img src="<?php echo base_url(); ?>assets/img/tw-w.png">
                         </a>
