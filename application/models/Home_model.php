@@ -8,12 +8,12 @@ class Home_model extends CI_Model {
 
     public function get_player_data()
 	{
-        $query = $this->db->query('SELECT * FROM garvhai_players LIMIT 8');
+        $query = $this->db->query('SELECT * FROM garvhai_players order by name asc LIMIT 8');
         return $query->result_array();
 	}
     public function get_player_video()
     {
-        $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = 1 AND type <> "social" LIMIT 8');
+        $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = 4 AND type <> "social" LIMIT 8');
         return $query->result_array();
     }
     

@@ -3,6 +3,7 @@
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
       </div>
+      <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
       <div class="top-video-info">
         <div>
           <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
@@ -255,7 +256,7 @@
                             }
                             $radioChecked = '';
                             $count=$count+1;
-                            if($playerData['id'] == '1'){ $radioChecked = 'checked="checked"'; }
+                            if($playerData['id'] == '4'){ $radioChecked = 'checked="checked"'; }
                             ?>
                                   <li>
                                     <input type="radio" <?php echo $radioChecked;?> id="players_<?php echo $playerData['id'];?>" name="players" value="<?php echo $playerData['id'];?>">
@@ -399,7 +400,7 @@
             <?php
               if(isset($records)){
                 foreach($records as $playerData) {
-                  $radChecked = $playerData['id'] == 1 ? $radChecked = 'checked="checked"' : $radChecked = '';
+                  $radChecked = $playerData['id'] == 4 ? $radChecked = 'checked="checked"' : $radChecked = '';
             ?>
                   <li>
                     <input type="radio" id="schedule_<?php echo $playerData['id'];?>" name="adaniplayers" value="<?php echo $playerData['id'];?>" <?php echo $radChecked;?>>
@@ -415,7 +416,7 @@
               <?php
                 if(isset($records)){
                   foreach($records as $playerData) {
-                    $dropSelect = $playerData['id'] == 1 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
+                    $dropSelect = $playerData['id'] == 4 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
               ?>
                 <option <?php echo $dropSelect;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
               <?php
@@ -427,27 +428,27 @@
           </div>
           <div class="col-sm-7 col-xs-12">
             <div class="media-list-wrpr-dwn media-list-wrpr-btm">
-              <div class="media-item">
                 <?php
                   $mediacount = 0;
                   foreach ($mediaRecords as $media) {
                 ?>
-                <div class="media-discrp">
-                  <div class="media-discrp-txt">
-                    <p><a href="<?php echo $media['link'];?>" target="blank"><?php echo $media['media_value'];?></a></p>
+                <div class="media-item">
+                  <div class="media-discrp">
+                    <div class="media-discrp-txt">
+                      <p><a href="<?php echo $media['link'];?>" target="blank"><?php echo $media['description'];?></a></p>
+                    </div>
+                    <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
                   </div>
-                  <div class="media-discrp-date"><?php echo date_format(date_create($media['published_date']), 'F jS, Y');?></div>
-                </div>
-                <div class="media-social-icon">
-                  <ul class="list-inline">
-                    <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                    <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
-                  </ul>
+                  <div class="media-social-icon">
+                    <ul class="list-inline">
+                      <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                      <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                    </ul>
+                  </div>
                 </div>
                 <?php
                   }
                 ?>
-              </div>
             </div>
           </div>
         </div>
@@ -464,9 +465,11 @@
             <div class="carousel-inner" role="listbox">
         <?php if(isset($videoRecords)){
                   foreach($videoRecords as $videoData) { 
-                      if($videoData['type'] == 'image') { ?>
+                      if($videoData['type'] == 'image') { 
+                          $imgnm = explode('.', $videoData['media_value']);
+                        ?>
                         <div class="item" id="modalImg_<?php echo $videoData['id']; ?>">
-                          <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>">
+                          <img src="<?php echo base_url(); ?>uploads/<?php echo $imgnm[0].'-l.jpg'; ?>" class="full-width-img">
                         </div>
                        <?php }else if($videoData['type'] == 'video') { ?>
                           <div class="item" id="modalImg_<?php echo $videoData['id']; ?>" >
