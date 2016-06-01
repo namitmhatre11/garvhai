@@ -43,8 +43,8 @@
           <img src="<?php echo base_url(); ?>assets/img/menu-close.png" class="menu-close hidden">
         </div>
         <ul class="list-inline pull-right mob-menu-list">
-          <li class="text-uppercase js--jumper-new vid-img-links-mob"><a href="#" data-href="#heros-gellary" >videos &amp; images</a></li>
-          <li class="text-uppercase js--jumper-new"><a href="#" data-href="#media" >media</a></li>
+          <li class="text-uppercase vid-img-links-mob"><a href="#" class="js--jumper-new" data-href="#heros-gellary">videos &amp; images</a></li>
+          <li class="text-uppercase"><a href="#" class="js--jumper-new" data-href="#media">media</a></li>
           <li><a href="#"><img src="<?php echo base_url(); ?>assets/img/adani.png"></a></li>
         </ul>
         <nav id="topNav" class="main-nav navbar-fixed-top">
