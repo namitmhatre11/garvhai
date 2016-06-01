@@ -1,9 +1,14 @@
+   <?php require_once('Mobile_Detect.php');
+    $detect = new Mobile_Detect;   ?>
    <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
-      <div class="embed-responsive embed-responsive-16by9">
+    <?php if( !$detect->isMobile()){ ?>
+      <div class="embed-responsive embed-responsive-16by9 video-resize">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
       </div>
-      <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
+      <?php }else { ?>
+        <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
+        <?php } ?>
       <div class="top-video-info">
         <div>
           <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
@@ -11,11 +16,13 @@
             They practise their sport, day in and day out, without complain, without expectation <br class="hidden-small" />for a country that doesn’t even know they exist. Now, it’s time to show them we <br class="hidden-small"/>care. It’s time to make our voices heard. It’s time to say <span>#Garvhai</span>
           </div>          
         </div>
-      </div>      
+      </div>
+       <?php if( $detect->isMobile()){ ?>      
       <div class="vedio-title-wrpr">
         <div class="vedio-hero-title text-uppercase">Inderjeet Singh</div>
         <div class="vedio-hero-desig">Shot putter</div>
       </div>
+      <?php } ?>
       <div class="js--jumper" data-href="#hero-wrpr"><img src="<?php echo base_url(); ?>assets/img/scroll-down.png"></div>
     </section>
     </section>
@@ -41,11 +48,7 @@
               $tb="";
               if(isset($records)){
                 foreach($records as $playerData) {
-                  $title=urlencode('Garvhai');
-                  $url= urlencode('http://uat.sodelsolutions.com/garvhai/');
-                  $summary=urlencode("Proud to support ".$playerData['name']." in the Rio Olympics 2016. #GarvHai");
-                  $image=urlencode('http://uat.sodelsolutions.com/garvhai/assets/img/logo.png');
-                  switch ($count) {
+                   switch ($count) {
                     case '1':
                       $lr="25%";
                       $tb="tl";                      
@@ -97,10 +100,8 @@
                       <div class="heros-social-links">
                         <ul class="list-inline">
                           <li class="fb-list">
-
-                            <div class="fb-share-button" data-href="http://uat.sodelsolutions.com/garvhai/" data-layout="icon" data-mobile-iframe="false"></div>
-
-                          <a href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                            <!-- <div class="fb-share-button" data-href="http://uat.sodelsolutions.com/garvhai/" data-layout="icon" data-mobile-iframe="false"></div> -->
+                           <a href="#" class="fb-share-btn social-icon-top" data-username="<?php echo $playerData['name'] ?>"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'Proud to support <?php echo $playerData['name'] ?> in the Rio Olympics 2016. \' via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
@@ -403,8 +404,9 @@
             <ul class="cust-inp-wrpr">
             <?php
               if(isset($records)){
+                $radChecked = '';
                 foreach($records as $playerData) {
-                  $radChecked = $playerData['id'] == 4 ? $radChecked = 'checked="checked"' : $radChecked = '';
+                  //$radChecked = $playerData['id'] == 4 ? $radChecked = 'checked="checked"' : $radChecked = '';
             ?>
                   <li>
                     <input type="radio" id="schedule_<?php echo $playerData['id'];?>" name="adaniplayers" value="<?php echo $playerData['id'];?>" <?php echo $radChecked;?>>

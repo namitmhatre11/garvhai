@@ -25,6 +25,8 @@ class Home_model extends CI_Model {
         }else if($mode == 'videos'){
             $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = '.$player_id.' AND type <> "social" LIMIT 8');
             
+        }else if($mode == 'allmedia'){
+            $query = $this->db->get_where('garvhai_players_media', array('type' => 'social'));
         }else if($mode == 'media'){
             $query = $this->db->get_where('garvhai_players_media', array('player_id' => $player_id,'type' => 'social'));
         }

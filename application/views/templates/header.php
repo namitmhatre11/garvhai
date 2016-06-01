@@ -7,14 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Garvhai</title>
-
-    <meta property="og:url"           content="http://uat.sodelsolutions.com/garvhai" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Garvhai" />
-    <meta property="og:description"   content="Proud to support Inderjeet Singh in the Rio Olympics 2016. #GarvHai" />
-    <meta property="og:image"         content="http://uat.sodelsolutions.com/garvhai/uploads/Indrajeet-Singh81.jpg" />
-
-
     <!-- Bootstrap -->
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
@@ -29,7 +21,7 @@
     <![endif]-->
   </head>
   <body>
-    <header class="main-header">
+      <header class="main-header">
       <section class="top-header-wrpr clearfix">
         <div class="pull-left">
           <a href="<?php echo base_url(); ?>">
@@ -38,8 +30,8 @@
         </div>
         <div class="pull-right">
           <ul class="list-inline">
-            <li class="vid-img-links"><a href="#" class="text-uppercase upper-links">Videos & images</a></li>
-            <li><a href="#" class="text-uppercase upper-links">Media</a></li>
+            <li class="vid-img-links"><a href="#" data-href="#heros-gellary" class="text-uppercase js--jumper-new upper-links">Videos & images</a></li>
+            <li><a href="#" data-href="#media" class="text-uppercase upper-links js--jumper-new">Media</a></li>
             <li class="tw-top-links"><a href="https://www.facebook.com/AdaniOnline/" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
             <li><a href="https://twitter.com/AdaniOnline" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
           </ul>
@@ -51,8 +43,8 @@
           <img src="<?php echo base_url(); ?>assets/img/menu-close.png" class="menu-close hidden">
         </div>
         <ul class="list-inline pull-right mob-menu-list">
-          <li class="text-uppercase vid-img-links-mob"><a href="#">videos &amp; images</a></li>
-          <li class="text-uppercase"><a href="#">media</a></li>
+          <li class="text-uppercase js--jumper-new vid-img-links-mob"><a href="#" data-href="#heros-gellary" >videos &amp; images</a></li>
+          <li class="text-uppercase js--jumper-new"><a href="#" data-href="#media" >media</a></li>
           <li><a href="#"><img src="<?php echo base_url(); ?>assets/img/adani.png"></a></li>
         </ul>
         <nav id="topNav" class="main-nav navbar-fixed-top">

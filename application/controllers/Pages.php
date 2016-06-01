@@ -6,18 +6,26 @@ class Pages extends CI_Controller {
 		$this->load->helper('url');
 	}
 
-    public function view($page = 'home')
+    public function terms_of_use()
 	{
-        if ( ! file_exists(APPPATH.'views/pages/'.$page.'.php'))
-        {
-            // Whoops, we don't have a page for that!
-            show_404();
-        }
+        $data['title'] = ucfirst('terms of use'); // Capitalize the first letter
 
-        $data['title'] = ucfirst($page); // Capitalize the first letter
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('pages/'.$page, $data);
-        $this->load->view('templates/footer', $data);
+        $this->load->view('pages/terms_of_use', $data);
+        
 	}
+    public function privacy_policy()
+    {
+        $data['title'] = ucfirst('privacy policy'); // Capitalize the first letter
+
+        $this->load->view('pages/privacy_policy', $data);
+        
+    }
+    public function legal_disclaimer()
+    {
+        $data['title'] = ucfirst('legal disclaimer'); // Capitalize the first letter
+
+        $this->load->view('pages/legal_disclaimer', $data);
+        
+    }
+    
 }
