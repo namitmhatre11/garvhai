@@ -4,7 +4,7 @@
     <section class="video-wrpr">
     <?php if( !$detect->isMobile()){ ?>
       <div class="embed-responsive embed-responsive-16by9 video-resize">
-        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe> -->
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
       </div>
       <?php }else { ?>
         <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
