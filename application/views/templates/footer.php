@@ -27,6 +27,7 @@
     <script src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <script src="<?php echo base_url(); ?>assets/js/custom.js" type="text/javascript" charset="utf-8"></script>
+
     <script type="text/javascript">
      
       var baseUrl = '<?php echo base_url() ?>';
@@ -56,11 +57,12 @@
           else{
             $('.video-wrpr,.video-wrpr>img,.top-video-info').css('height','auto');
           }
-          
+        
       });
          if($(window).width()>=1007){
             $('.video-wrpr,.video-wrpr>img,.top-video-info').height($(window).height());
          }
+
         $('.hero-detail-middle,.media-list-wrpr-btm').mCustomScrollbar({
           theme:"dark"
         });
@@ -180,7 +182,7 @@
         $('body').on('click','.fb-user-profile', function(e){
           e.preventDefault();
           var username = $(this).data('username');
-          window.open('http://www.facebook.com/sharer.php?s=100&amp;p[title]=Garvhai&amp;p[summary]=Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai&amp;p[url]=http://uat.sodelsolutions.com/garvhai/&amp;p[images][0]=http://uat.sodelsolutions.com/garvhai/assets/img/logo.png','sharer','toolbar=0,status=0,width=550,height=300');
+          shareFBData(username);
        });
 
         $('body').on('click','.tw-user-profile', function(e){
@@ -189,6 +191,11 @@
           window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');          
         });
 
+        $('.fb-share-btn').click(function(e){
+          e.preventDefault();
+          var username = $(this).data('username');
+          shareFBData(username);
+        });
 
       });
 
@@ -254,25 +261,39 @@
             }
           });
         }
-
       }
+
       function converter(s) {
-              var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-              s =  s.replace(/-/g, '/');
-              var d = new Date(s);
-              return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
-          }
+          var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+          s =  s.replace(/-/g, '/');
+          var d = new Date(s);
+          return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
+      }
+      function shareFBData(username){
+        FB.ui(
+          {
+            method: 'feed',
+            name: 'Garvhai',
+            link: 'http://uat.sodelsolutions.com/garvhai/',
+            picture: baseUrl+'/uploads/Indrajeet-Singh.jpg',
+            description: 'Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai',
+            message: ''
+          });
+      }
     </script>
 
     <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    
+    <script>
+    window.fbAsyncInit = function() {
+      FB.init({appId: '1438336106420660', status: true, cookie: true,
+      xfbml: true});
+      };
+      (function() {
+      var e = document.createElement('script'); e.async = true;
+      e.src = document.location.protocol +
+      '//connect.facebook.net/en_US/all.js';
+      document.getElementById('fb-root').appendChild(e);
+    }());
+    </script>
   </body>
 </html>

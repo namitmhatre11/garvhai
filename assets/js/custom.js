@@ -33,16 +33,15 @@ $(document).ready(function(){
       });
    });
     
-    $('.js--jumper').click(function(e){ 
+    $('.js--jumper,.js--jumper-new').click(function(e){ 
       e.preventDefault();       
     
-      $('body').addClass('scroll-active');
+      
       $("body, html").animate({
             scrollTop: $($(this).data('href')).offset().top-40
       }, 600, 'easeInOutExpo');
-      $("#topNav .nav li").removeClass("nav-active");
-      $("a[data-href='#hero-wrpr']").parent('li').addClass("nav-active");
-      setTimeout(function(){$('body').removeClass('scroll-active');}, 800);
+   
+   
     });
     $('#topNav .nav li .page-scroll').click(function(e){
       e.preventDefault(); 

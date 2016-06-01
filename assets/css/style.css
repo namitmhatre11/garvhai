@@ -83,6 +83,7 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 #topNav .nav>li>a{bottom: auto;right: auto}
 .top-header-wrpr{padding: 20px 0;}
 .bottom-header-wrpr,.top-header-wrpr{max-width: 930px;margin: 0 auto;width: 100%;}
+.bottom-header-wrpr{max-width: 620px;}
 .fix-header .bottom-header-wrpr .main-nav:before{display: none;}
 .fix-header .bottom-header-wrpr{position: fixed;top: 0;left: 0;width: 100%;max-width: 100%;}
 .fix-header .bottom-header-wrpr .main-nav{width: 100%;background-color: #fff;}
@@ -104,8 +105,8 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .main-header .navbar-nav>.nav-active:before{content: '\e114';font-family: 'Glyphicons Halflings';font-style: normal;font-weight: 400;line-height: 1;-webkit-font-smoothing: antialiased;-moz-osx-font-smoothing: grayscale;width: 100%;text-align: center;bottom: -12px;left: 0;font-size: 13px;color: #f90;position: absolute;}
 .main-header .navbar-nav>li>a{font-family: 'rubriksemibold';font-size: 12px;margin-top: 7px;}
 .main-header .navbar-nav>li:last-child>a{margin-top: 0;}
-.bottom-header-wrpr .nav li+li{margin-left: 129px;}
-.bottom-header-wrpr .nav li.adani-logo{margin-left: 50px;}
+.bottom-header-wrpr .nav li+li{margin-left: 56px;}
+.bottom-header-wrpr .nav li.adani-logo{margin-left: 9px;}
 .fix-header .bottom-header-wrpr .nav li.adani-logo{margin-left: 0px;}
 .bottom-header-wrpr .nav{background-color: #fff;padding: 11px 9px;position: relative;}
 .main-nav{float: left;position: relative;}
@@ -174,6 +175,7 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .hero-achive-name {font-size: 12px;font-family: 'rubrikmedium';}
 .hero-achive-event {font-size: 12px;font-family: 'rubrikregular';}
 .hero-detail-middle-name {font-size: 25px;font-family: 'rubrikmedium';margin: 12px 0 12px;}
+.hero-detail-inner p {text-align: justify;}
 .hero-detail-social-icon>div{font-family: 'rubrikmedium';font-size: 10px;margin-bottom: 5px;text-transform: uppercase;}
 .hero-detail-social-icon ul>li+li{padding-left: 8px;border-left: 1px solid #ffcc80;}
 .list-title {font-size: 14px;font-family: 'rubriksemibold';margin-bottom: 10px;}
