@@ -71,31 +71,16 @@
 
 <section class="contact-wrpr1">
     <div class="about-inner-new">
-    <h2 class="about-title text-uppercase text-center">Terms & Conditions</h2>
-    <p class="about-discrb1 text-center">
-	VISITORS TO THIS WEB SITE ARE BOUND BY THE FOLLOWING TERMS AND CONDITIONS ("TERMS"). SO, PLEASE READ THE TERMS CAREFULLY BEFORE CONTINUING TO USE THIS SITE. IF YOU DO NOT AGREE WITH ANY OF THESE TERMS, PLEASE DO NOT USE THIS SITE.</p> <br>
-
-		<p class="subtitle">The use of this website is subject to the following terms of use:</p>
-		<ul class="simpleList">
-			<li>
-				The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
-			<li>
-				This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, personal information may be stored by us for use by third parties.</li>
-			<li>
-				Neither ADANI GROUP nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
-			<li>
-				Your use of any information or materials on this website is entirely at your own risk, for which ADANI GROUP shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
-			<li>
-				This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
-			<li>
-				The adani<sup>TM</sup> and all products and logos denoted with “TM” or “®”are trademarks or registered trademarks of ADANI GROUP or its affiliates. ADANI GROUP trademarks may not be used in connection with any product or service that is not a ADANI GROUP product, functions or service.</li>
-			<li>
-				Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
-			<li>
-				From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that ADANI GROUP endorse the website(s). ADANI GROUP has no responsibility for the content of the linked website(s).</li>
-			<li>
-				Applicable Law and Jurisdiction of this WEBSITE are governed by and to be interpreted in accordance with laws of India, without regard to the choice or conflicts of law provisions of any jurisdiction. The user/site visitor agrees that in the event of any dispute arising in relation to this Disclaimer or any dispute arising in relation to the web site whether in contract or tort or otherwise, to submit to the jurisdiction of the courts located at Ahmedabad only for the resolution of all such disputes.</li>
-    </ul> 
+    <h2 class="about-title text-uppercase text-center">Legal disclaimer</h2>
+    <p class="about-discrb1">ADANI GROUP retains copyright on all the text, contents, graphics and trademarks displayed on this site. All the text, graphics and trademarks displayed on this site are owned by ADANI GROUP.</p> <br>
+    <p class="about-discrb1">
+      The information on this site has been included in good faith and is for general purpose only and should not be relied upon for any specific purpose. The user shall not distribute text or graphics to others without the express written consent of ADANI GROUP. The user shall also not, without ADANI GROUP’s prior permission, copy and distribute this information on any other server, or modify or reuse text or graphics on this or any another system.</p> <br>
+    <p class="about-discrb1">
+      Although ADANI GROUP tries to ensure that all information and recommendations, whether in relation to the products, services, offerings or otherwise (hereinafter "information"), provided as part of this website is correct at the time of inclusion on the web site, ADANI GROUP does not guarantee the accuracy of the Information. ADANI GROUP makes no representations or warranties as to the completeness or accuracy of Information. Certain links in this site connect to other Web Sites maintained by third parties over whom ADANI GROUP has no control. ADANI GROUP makes no representations as to the accuracy or any other aspect of information contained in such other Web Sites.</p> <br>
+    <p class="about-discrb1">
+      ADANI GROUP hereby disclaims all warranties and conditions with regard to this information, including all implied warranties and conditions of merchantability, fitness for any particular purpose, title and non-infringement. In no event will ADANI GROUP, its related partnerships or corporations, or the partners, agents or employees thereof be liable for any decision made by the user and/or site visitor for any inference or action taken in reliance on the information provided in this site or for any consequential, special or similar damages. Applicable Law and Jurisdiction of this Disclaimer are governed by and to be interpreted in accordance with laws of India, without regard to the choice or conflicts of law provisions of any jurisdiction. The user/site visitor agrees that in the event of any dispute arising in relation to this Disclaimer or any dispute arising in relation to the web site whether in contract or tort or otherwise, to submit to the jurisdiction of the courts located at Ahmedabad (Gujarat) (India) only for the resolution of all such disputes.</p> <br>
+    <p class="about-discrb1">
+      Except for the historical information herein, statement in this website, which includes words or phrases such as “will”, “aim”, “will likely result”, “would”, “believe”, “may”, “expect”, “will continue”, “anticipate”, “estimate”, “intend”, “plan”, “contemplate”, “seek to “, “future”, “objective”, “goal”, “likely”, “project”, “should”, “potential”, “will pursue”, and similar expressions or variations of such expressions may constitute “forward-looking statements”. These forward-looking statements involve a number of risks, uncertainties and other factors that could cause actual results to differ materially from those suggested by the forward-looking statements. These risks and uncertainties include, but are not limited to our liability to successfully implement our strategy, our growth and expansion plans, obtain regulatory approvals, our provisioning policies, technological changes, investment and business income, cash flow projections, our exposure to the market risks as well as other risks. The company does not undertake any obligation to update forward-looking statements to reflect events or circumstances after the date thereof.</p>
     </div>
 </section>
 

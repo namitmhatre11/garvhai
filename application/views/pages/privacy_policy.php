@@ -71,31 +71,25 @@
 
 <section class="contact-wrpr1">
     <div class="about-inner-new">
-    <h2 class="about-title text-uppercase text-center">Terms & Conditions</h2>
-    <p class="about-discrb1 text-center">
-	VISITORS TO THIS WEB SITE ARE BOUND BY THE FOLLOWING TERMS AND CONDITIONS ("TERMS"). SO, PLEASE READ THE TERMS CAREFULLY BEFORE CONTINUING TO USE THIS SITE. IF YOU DO NOT AGREE WITH ANY OF THESE TERMS, PLEASE DO NOT USE THIS SITE.</p> <br>
-
-		<p class="subtitle">The use of this website is subject to the following terms of use:</p>
-		<ul class="simpleList">
-			<li>
-				The content of the pages of this website is for your general information and use only. It is subject to change without notice.</li>
-			<li>
-				This website uses cookies to monitor browsing preferences. If you do allow cookies to be used, personal information may be stored by us for use by third parties.</li>
-			<li>
-				Neither ADANI GROUP nor any third parties provide any warranty or guarantee as to the accuracy, timeliness, performance, completeness or suitability of the information and materials found or offered on this website for any particular purpose. You acknowledge that such information and materials may contain inaccuracies or errors and we expressly exclude liability for any such inaccuracies or errors to the fullest extent permitted by law.</li>
-			<li>
-				Your use of any information or materials on this website is entirely at your own risk, for which ADANI GROUP shall not be liable. It shall be your own responsibility to ensure that any products, services or information available through this website meet your specific requirements.</li>
-			<li>
-				This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.</li>
-			<li>
-				The adani<sup>TM</sup> and all products and logos denoted with “TM” or “®”are trademarks or registered trademarks of ADANI GROUP or its affiliates. ADANI GROUP trademarks may not be used in connection with any product or service that is not a ADANI GROUP product, functions or service.</li>
-			<li>
-				Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offence.</li>
-			<li>
-				From time to time this website may also include links to other websites. These links are provided for your convenience to provide further information. They do not signify that ADANI GROUP endorse the website(s). ADANI GROUP has no responsibility for the content of the linked website(s).</li>
-			<li>
-				Applicable Law and Jurisdiction of this WEBSITE are governed by and to be interpreted in accordance with laws of India, without regard to the choice or conflicts of law provisions of any jurisdiction. The user/site visitor agrees that in the event of any dispute arising in relation to this Disclaimer or any dispute arising in relation to the web site whether in contract or tort or otherwise, to submit to the jurisdiction of the courts located at Ahmedabad only for the resolution of all such disputes.</li>
-    </ul> 
+    <h2 class="about-title text-uppercase text-center">Privacy Policy</h2>
+    <p class="about-discrb1"> We at ADANI GROUP respect the privacy of everyone who visits this website and are committed to maintain the privacy and security of the personal information of all visitors to this website. Our policy on the collection and use of personal information and other information is outlined below.. </p><br>
+  <p class="about-discrb1">In case of visiting this website to read or download information, it must be known that ADANI GROUP collects and stores a standard set of internet-related information, such as an Internet Protocol (IP) address, the date and time, the type of browser and operating system used, the pages(s) visited. All information is collected to help ADANI GROUP for making this site more useful to its customer(s) and only used for statistical purposes.</p> <br>
+  <p class="about-discrb1">ADANI GROUP collects and uses information such as name, telephone number, email address, etc. in order to:</p><br>
+    <ul class="simpleList">
+      <li>
+        Respond to queries and requests submitted by you</li>
+      <li>
+        Process bids etc.</li>
+    </ul>
+    <br>
+    <p class="about-discrb1">
+      Except as set out in this privacy policy, ADANI GROUP will not disclose any personally identifiable information without permission, unless ADANI GROUP is legally entitled or required to do so or if ADANI GROUP believes that it is necessary to protect and/or defend it’s rights, property or personal safety etc.</p> <br>
+    <p class="about-discrb1">
+      <strong>Change of Privacy Policy</strong></p><br>
+      <br>
+      <p class="about-discrb1">ADANI GROUP reserves the full rights to change/alter/amend/modify the contents of the privacy policy from time to time without any prior notice or intimation.</p> <br>
+      <p class="about-discrb1">Copyright © ADANI GROUP</p>
+      
     </div>
 </section>
 
