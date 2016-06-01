@@ -256,6 +256,7 @@
                       }
                     }); 
                     $('.'+divToReplace).html(mediaHtml);
+                    $('.media-list-wrpr-btm').mCustomScrollbar({theme:"dark"});
                 }
               }
             }
