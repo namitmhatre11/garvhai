@@ -318,7 +318,7 @@
 
       window.fbAsyncInit = function(){
       FB.init({
-          appId: '1438336106420660', status: true, cookie: true, xfbml: true }); 
+          appId: '1743283562560962', status: true, cookie: true, xfbml: true }); 
       };
       (function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
           if(d.getElementById(id)) {return;}
@@ -326,13 +326,14 @@
           js.async = true;js.src = "//connect.facebook.net/en_US/all" + (debug ? "/debug" : "") + ".js";
           ref.parentNode.insertBefore(js, ref);}(document, /*debug*/ false));
       function postToFeed(title, desc, url, image){
-      var obj = {method: 'feed',link: url, picture: 'http://www.url.com/images/'+image,name: title,description: desc};
+      var obj = {method: 'feed',link: url, picture: image,name: title,description: desc};
       function callback(response){}
       FB.ui(obj, callback);
       }
 
       $('.btnShare').click(function(){
         elem = $(this);
+        console.log(elem.data('image'));
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
         return false;
       });
