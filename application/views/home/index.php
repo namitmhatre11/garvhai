@@ -422,10 +422,12 @@
             </ul>
             <div class="select-style">
               <select id="mobileMediaFilter">
+              <option id="schedule_all" name="adaniplayers" value="all">All
               <?php
                 if(isset($records)){
+                  $dropSelect = '';
                   foreach($records as $playerData) {
-                    $dropSelect = $playerData['id'] == 4 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
+                    //$dropSelect = $playerData['id'] == 4 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
               ?>
                 <option <?php echo $dropSelect;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
               <?php
