@@ -182,7 +182,8 @@
         $('body').on('click','.fb-user-profile', function(e){
           e.preventDefault();
           var username = $(this).data('username');
-          shareFBData(username);
+          var playerimage = $(this).data('playerimage');
+          shareFBData(username,playerimage);
        });
 
         $('body').on('click','.tw-user-profile', function(e){
@@ -194,7 +195,8 @@
         $('.fb-share-btn').click(function(e){
           e.preventDefault();
           var username = $(this).data('username');
-          shareFBData(username);
+          var playerimage = $(this).data('playerimage');
+          shareFBData(username,playerimage);
         });
 
         $('#mobileMediaFilter').change(function(e){
@@ -246,8 +248,8 @@
                 var socialHtml = '';
                 var mobileFBSocialHtml = mobileTWSocialHtml = '';
                 if(playerMode == 'profile'){
-                  socialHtml += '<li><a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a></li><li><a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a></li>';
-                  mobileFBSocialHtml += '<a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a>';
+                  socialHtml += '<li><a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'" data-playerimage="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a></li><li><a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a></li>';
+                  mobileFBSocialHtml += '<a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'" data-playerimage="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a>';
                   mobileTWSocialHtml += '<a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a>';
                     $('.hero-detail-inner-media').addClass('hidden');
                     $('.hero-detail-inner-profile').removeClass('hidden');
@@ -286,13 +288,14 @@
           var d = new Date(s);
           return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
       }
-      function shareFBData(username){
+      function shareFBData(username,playerImage){
+        console.log(playerImage);
         FB.ui(
           {
             method: 'feed',
             name: 'Garvhai',
             link: 'http://uat.sodelsolutions.com/garvhai/',
-            picture: baseUrl+'/uploads/Indrajeet-Singh.jpg',
+            picture: playerImage,
             description: 'Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai',
             message: ''
           });
