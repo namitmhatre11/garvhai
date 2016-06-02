@@ -402,6 +402,9 @@
           <div class="col-sm-5 col-xs-12">
             <h2 class="athletes-act">Catch the athletes in action</h2>
             <ul class="cust-inp-wrpr">
+            <li>
+            <input type="radio" id="schedule_all" name="adaniplayers" value="all">
+            <label class="custom-radio text-uppercase" for="schedule_all" >all</label></li>
             <?php
               if(isset($records)){
                 $radChecked = '';

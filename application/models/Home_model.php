@@ -20,11 +20,13 @@ class Home_model extends CI_Model {
 
     public function get_player_modal_data($mode = '',$player_id = '')
     {
+        if($player_id =='all'){
+            $mode = 'allmedia';
+        }
         if ($mode == 'profile') {
             $query = $this->db->get_where('garvhai_players', array('id' => $player_id));
         }else if($mode == 'videos'){
             $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = '.$player_id.' AND type <> "social" LIMIT 8');
-            
         }else if($mode == 'allmedia'){
             $query = $this->db->get_where('garvhai_players_media', array('type' => 'social'));
         }else if($mode == 'media'){
