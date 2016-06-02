@@ -101,7 +101,7 @@
                         <ul class="list-inline">
                           <li class="fb-list">
                             <!-- <div class="fb-share-button" data-href="http://uat.sodelsolutions.com/garvhai/" data-layout="icon" data-mobile-iframe="false"></div> -->
-                           <a href="#" class="fb-share-btn social-icon-top" data-username="<?php echo $playerData['name'] ?>"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                           <a href="#" class="fb-share-btn social-icon-top" data-username="<?php echo $playerData['name'] ?>" data-playerimage="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'Proud to support <?php echo $playerData['name'] ?> in the Rio Olympics 2016. \' via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
@@ -173,7 +173,7 @@
                     </div>
                   </div>
                   <div class="hero-detail-middle">
-                    <div class="media-list-wrpr">
+                    <div class="media-list-wrpr" id="mediaListWrpr">
                       
                     </div>
                   </div>
@@ -418,7 +418,7 @@
             ?>
             </ul>
             <div class="select-style">
-              <select id="mobileFilter">
+              <select id="mobileMediaFilter">
               <?php
                 if(isset($records)){
                   foreach($records as $playerData) {
@@ -434,6 +434,9 @@
           </div>
           <div class="col-sm-7 col-xs-12">
             <div class="media-list-wrpr-dwn media-list-wrpr-btm">
+            <div id="dynamicMediaContent">
+              
+           
                 <?php
                   $mediacount = 0;
                   foreach ($mediaRecords as $media) {
@@ -455,6 +458,7 @@
                 <?php
                   }
                 ?>
+                 </div>
             </div>
           </div>
         </div>
