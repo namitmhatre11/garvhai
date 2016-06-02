@@ -173,7 +173,7 @@
                     </div>
                   </div>
                   <div class="hero-detail-middle">
-                    <div class="media-list-wrpr">
+                    <div class="media-list-wrpr" id="mediaListWrpr">
                       
                     </div>
                   </div>
@@ -418,7 +418,7 @@
             ?>
             </ul>
             <div class="select-style">
-              <select id="mobileFilter">
+              <select id="mobileMediaFilter">
               <?php
                 if(isset($records)){
                   foreach($records as $playerData) {
@@ -434,6 +434,9 @@
           </div>
           <div class="col-sm-7 col-xs-12">
             <div class="media-list-wrpr-dwn media-list-wrpr-btm">
+            <div id="dynamicMediaContent">
+              
+           
                 <?php
                   $mediacount = 0;
                   foreach ($mediaRecords as $media) {
@@ -455,6 +458,7 @@
                 <?php
                   }
                 ?>
+                 </div>
             </div>
           </div>
         </div>

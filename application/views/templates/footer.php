@@ -10,9 +10,9 @@
       <div class="col-sm-6 col-xs-12">
         <nav class="footer-nav clearfix">
           <ul class="nav navbar-nav navbar-right">           
-            <li><a href="<?php echo base_url(); ?>index.php/pages/privacy_policy">Privacy policy</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/pages/legal_disclaimer">Legal disclaimer</a></li>                       
-            <li><a href="<?php echo base_url(); ?>index.php/pages/terms_of_use">Terms of use</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/pages/privacy_policy" target="_blank">Privacy policy</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/pages/legal_disclaimer" target="_blank">Legal disclaimer</a></li>                       
+            <li><a href="<?php echo base_url(); ?>index.php/pages/terms_of_use" target="_blank">Terms of use</a></li>
           </ul>
         </nav>
       </div>        
@@ -103,7 +103,7 @@
               $(this).parents('.overlay-wrpr').removeClass('active-mob-overlay');
               $(this).parents('.heros-list').find('.hover-overlays').show();
               $(this).parents('.overlay-wrpr').addClass('active-img').find('.hover-overlays').hide();
-              showModalContent(playerId,playerMode,'media-list-wrpr');
+              showModalContent(playerId,playerMode,'mediaListWrpr');
             }else{
               $('.hero-detail-info').addClass('hidden');
               $(this).parents('.heros-list').find('.hover-overlays').hide();
@@ -176,7 +176,7 @@
 
         $('input[name="adaniplayers"]').change(function(){
           var playerId = $(this).val();
-          showModalContent(playerId,'media', 'media-list-wrpr-dwn');
+          showModalContent(playerId,'media', 'dynamicMediaContent');
         });
 
         $('body').on('click','.fb-user-profile', function(e){
@@ -196,6 +196,21 @@
           var username = $(this).data('username');
           shareFBData(username);
         });
+
+        $('#mobileMediaFilter').change(function(e){
+          e.preventDefault();
+          e.stopPropagation();
+          $('body').addClass('loading');
+          var playerId = $(this).val();
+          if(playerId){
+            showModalContent(playerId,'media', 'dynamicMediaContent');
+          }else{
+            alert("Please select atleast one value!");
+            return false;
+          }
+          
+        }); 
+        
 
       });
 
@@ -219,6 +234,7 @@
 
       function showModalContent(playerId, playerMode, divToReplace){
         if(playerId && playerMode){
+
           $.ajax({
             url: baseUrl+"index.php/home/player_model_data",
             type: 'POST',            
@@ -255,9 +271,9 @@
                         mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'" target="blank">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
                       }
                     }); 
-                    $('.'+divToReplace).html(mediaHtml);
-                    $('.media-list-wrpr-btm').mCustomScrollbar({theme:"dark"});
+                    $('#'+divToReplace).html(mediaHtml);
                 }
+                $('body').removeClass('loading');
               }
             }
           });

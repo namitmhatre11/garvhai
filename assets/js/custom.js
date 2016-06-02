@@ -106,7 +106,7 @@ $(document).ready(function(){
 		if(playerId){
 			playerFilterData(playerId);
 		}else{
-			alert("Please checked atleast one value!");
+			alert("Please select atleast one value!");
 			return false;
 		}
 		
