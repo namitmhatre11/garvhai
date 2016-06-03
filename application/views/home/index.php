@@ -304,10 +304,12 @@
                   foreach($videoRecords as $videoData) { ?> 
                     <div class="col-xs-4 col-xs-20 light-box-wrpr">
                       <div class="row">
-                      <?php if($videoData['type'] == 'image') { ?>
+                      <?php if($videoData['type'] == 'image') { 
+                            $largeImg = explode('.', $videoData['media_value']);
+                        ?>
                           <a>
                             <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>" class="full-width-img">
-                            <div class="light-box-overlay image-overlay" data-id="<?php echo $videoData['id']; ?>"></div>
+                            <div class="light-box-overlay image-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $largeImg[0].'-l.jpg'; ?>" data-title="<?php echo $videoData['name']; ?>" data-desc="Proud to support <?php echo $videoData['name']; ?> in the Rio Olympics 2016. #GarvHai"></div>
                           </a>   
                         <?php }else if($videoData['type'] == 'video') { ?>
                             <a href="#">
@@ -509,8 +511,8 @@
       <div class="modal-footer">
         <div class="heros-social-links">
         <ul class="list-inline">
-          <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-          <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+          <li><a id="largeShare" href="<?php echo base_url(); ?>" data-media="yes" data-image="" data-title="" data-desc="" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+          <li><a  id="largeTWShare" href="https://twitter.com/AdaniOnline" class="social-icon-top tw-user-profile" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
         </ul>
       </div>
       </div>

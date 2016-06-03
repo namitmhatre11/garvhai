@@ -117,10 +117,19 @@ $(document).ready(function(){
 		var imageId = $(this).attr('data-id');
 		$('.item').removeClass('active');
 		$('#modalImg_'+imageId).addClass('active');
-		$('#myModal').modal('show');
+		$("#largeShare").attr({
+	        "data-title" : $(this).attr('data-title'),
+	        "data-image" : $(this).attr('data-image'),
+	        "data-desc" : $(this).attr('data-desc')
+	    });
+	    $("#largeTWShare").attr("data-username",$(this).attr('data-title'));	    
+	    $('#myModal').modal('show');
 	});
 });
-
+$('#carousel-example-generic').bind('slid.bs.carousel', function (e) {
+	$("#largeShare").attr('data-image',$('#carousel-example-generic').find('.active').find('img').attr('src'));
+    
+})
 function playerFilterData(playerID){
 	if(playerID){
 		$.ajax({
@@ -137,7 +146,8 @@ function playerFilterData(playerID){
 		          			for(var i=0; i<filterValue.length; i++){
 		          				filterHtml += '<div class="col-xs-4 col-xs-20 light-box-wrpr"><div class="row">';
 		          				if(filterValue[i].type == 'image'){
-		          					filterHtml += '<a><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'" class="full-width-img"><div class="light-box-overlay image-overlay" data-id="'+filterValue[i].id+'"></div></a>';
+		          					entryArray = filterValue[i].media_value.split('.');
+		          					filterHtml += '<a><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'" class="full-width-img"><div class="light-box-overlay image-overlay" data-id="'+filterValue[i].id+'" data-desc="Proud to support '+filterValue[i].name+' in the Rio Olympics 2016. #GarvHai" data-title="'+filterValue[i].name+'" data-image="'+baseUrl+'uploads/'+entryArray[0]+'-l.jpg"></div></a>';
 		          					modalInnerHtml += '<div class="item" id="modalImg_'+filterValue[i].id+'"><img src="'+baseUrl+'uploads/'+filterValue[i].media_value.split('.', 1)+'-l.jpg"></div>';
 		          				}else if(filterValue[i].type == 'video'){
 		          					filterHtml += '<a href="#"><img src="'+baseUrl+'uploads/'+filterValue[i].video_thumbnail+'" class="full-width-img"><div class="light-box-overlay video-overlay" data-id="'+filterValue[i].id+'"></div></a>';

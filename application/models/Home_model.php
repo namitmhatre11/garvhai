@@ -13,7 +13,7 @@ class Home_model extends CI_Model {
 	}
     public function get_player_video()
     {
-        $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = 4 AND type <> "social" LIMIT 8');
+        $query = $this->db->query('SELECT gm.*,gp.name,gp.profile_photo FROM garvhai_players_media gm INNER JOIN garvhai_players gp ON gp.id = gm.player_id WHERE gm.player_id = 4 AND gm.type <> "social" LIMIT 8');
         return $query->result_array();
     }
     
@@ -40,7 +40,7 @@ class Home_model extends CI_Model {
      public function get_player_filter_data($player_id = '')
     {
         //$query = $this->db->get_where('garvhai_players_media', array('player_id' => $player_id), 8, 0);
-        $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = '.$player_id.' AND type <> "social" LIMIT 8');
+        $query = $this->db->query('SELECT gm.*,gp.name,gp.profile_photo FROM garvhai_players_media gm INNER JOIN garvhai_players gp ON gp.id = gm.player_id WHERE gm.player_id = '.$player_id.' AND gm.type <> "social" LIMIT 8');
         //echo $this->db->last_query(); exit();
         return $query->result_array();
     }
