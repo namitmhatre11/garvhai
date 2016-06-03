@@ -309,7 +309,7 @@
       FB.ui(obj, callback);
       }
 
-      $('.btnShare').click(function(){
+      $('body').on('click','.btnShare', function(e){
         elem = $(this);
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
         return false;

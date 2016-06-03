@@ -106,7 +106,7 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .main-header .navbar-nav>li>a{font-family: 'rubriksemibold';font-size: 12px;margin-top: 7px;}
 .main-header .navbar-nav>li:last-child>a{margin-top: 0;}
 .bottom-header-wrpr .nav li+li{margin-left: 56px;}
-.bottom-header-wrpr .nav li.adani-logo{margin-left: 9px;}
+.bottom-header-wrpr .nav li.adani-logo{margin-left: 4px;}
 .fix-header .bottom-header-wrpr .nav li.adani-logo{margin-left: 0px;}
 .bottom-header-wrpr .nav{background-color: #fff;padding: 11px 9px;position: relative;}
 .main-nav{float: left;position: relative;}
