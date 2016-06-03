@@ -100,8 +100,7 @@
                       <div class="heros-social-links">
                         <ul class="list-inline">
                           <li class="fb-list">
-                            <!-- <div class="fb-share-button" data-href="http://uat.sodelsolutions.com/garvhai/" data-layout="icon" data-mobile-iframe="false"></div> -->
-                           <a href="#" class="fb-share-btn social-icon-top" data-username="<?php echo $playerData['name'] ?>" data-playerimage="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                           <a href="<?php echo base_url(); ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $playerData['name'];?>" data-desc="Proud to support <?php echo $playerData['name'];?> in the Rio Olympics 2016. #GarvHai" class="btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'Proud to support <?php echo $playerData['name'] ?> in the Rio Olympics 2016. \' via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
@@ -402,6 +401,9 @@
           <div class="col-sm-5 col-xs-12">
             <h2 class="athletes-act">Catch the athletes in action</h2>
             <ul class="cust-inp-wrpr">
+            <li>
+            <input type="radio" id="schedule_all" name="adaniplayers" value="all">
+            <label class="custom-radio text-uppercase" for="schedule_all" >all</label></li>
             <?php
               if(isset($records)){
                 $radChecked = '';
@@ -419,10 +421,12 @@
             </ul>
             <div class="select-style">
               <select id="mobileMediaFilter">
+              <option id="schedule_all" name="adaniplayers" value="all">All
               <?php
                 if(isset($records)){
+                  $dropSelect = '';
                   foreach($records as $playerData) {
-                    $dropSelect = $playerData['id'] == 4 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
+                    //$dropSelect = $playerData['id'] == 4 ? $dropSelect = 'selected="selected"' : $dropSelect = '';
               ?>
                 <option <?php echo $dropSelect;?> value="<?php echo $playerData['id'];?>"><?php echo $playerData['name'];?></option>
               <?php
