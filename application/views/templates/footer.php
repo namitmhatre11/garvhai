@@ -127,6 +127,7 @@
           e.preventDefault();
           $('.user-prof-wrpr').addClass('hidden');          
         });
+
         $('.back-btn').click(function(){
           $(this).parents('.hero-detail-info').addClass('hidden');
           $('.user-prof-wrpr').removeClass('hidden');  
@@ -183,13 +184,21 @@
           e.preventDefault();
           elem = $(this);
           postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
-        return false;
+          return false;
        });
 
         $('body').on('click','.tw-user-profile', function(e){
           e.preventDefault();
           var username = $(this).data('username');
           window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');          
+        });
+
+        $('body').on('click','.tw-user-media', function(e){
+          e.preventDefault();
+          var link = $(this).data('href');
+          var description = $(this).data('desc');
+          var username = $(this).data('title');
+          window.open('https://twitter.com/share?url='+escape(link)+'&text='+username+': '+description+'via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');          
         });
 
         $('#mobileMediaFilter').change(function(e){
@@ -263,7 +272,7 @@
                     $.each( data, function( index, mediaValue ) { 
                       for(var i=0; i<mediaValue.length; i++){
                         var published_date = converter(mediaValue[i].published_date);
-                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'" target="blank">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li><li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li></ul></div></div>';
+                        mediaHtml += '<div class="media-item"><div class="media-discrp"><div class="media-discrp-txt"><a href="'+mediaValue[i].link+'" target="blank">'+mediaValue[i].description+'</a></div><div class="media-discrp-date">'+published_date+'</div></div><div class="media-social-icon"><ul class="list-inline"><li><a href="'+mediaValue[i].link+'" data-desc="'+mediaValue[i].media_value+'" data-title="'+mediaValue[i].name+'" data-image="'+baseUrl+'uploads/'+mediaValue[i].profile_photo+'" class="social-icon-top fb-user-profile"><img src="'+baseUrl+'assets/img/fb-w.png"></a></li><li><a href="#" data-title="'+mediaValue[i].name+'"  data-href="'+mediaValue[i].link+'" data-desc="'+mediaValue[i].media_value+'"  class="social-icon-top tw-user-media"><img src="'+baseUrl+'assets/img/tw-w.png"></a></li></ul></div></div>';
                       }
                     }); 
                     $('#'+divToReplace).html(mediaHtml);

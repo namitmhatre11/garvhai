@@ -26,11 +26,12 @@ class Home_model extends CI_Model {
         if ($mode == 'profile') {
             $query = $this->db->get_where('garvhai_players', array('id' => $player_id));
         }else if($mode == 'videos'){
-            $query = $this->db->query('SELECT * FROM garvhai_players_media WHERE player_id = '.$player_id.' AND type <> "social" LIMIT 8');
+            $query = $this->db->query('SELECT gm.*,gp.name,gp.profile_photo FROM garvhai_players_media gm INNER JOIN garvhai_players gp ON gp.id = gm.player_id WHERE gm.player_id = '.$player_id.' AND gm.type <> "social" LIMIT 8');
         }else if($mode == 'allmedia'){
-            $query = $this->db->get_where('garvhai_players_media', array('type' => 'social'));
+            $query = $this->db->query('SELECT gm.*,gp.name,gp.profile_photo FROM garvhai_players_media gm INNER JOIN garvhai_players gp ON gp.id = gm.player_id WHERE gm.type = "social"');
         }else if($mode == 'media'){
-            $query = $this->db->get_where('garvhai_players_media', array('player_id' => $player_id,'type' => 'social'));
+            $query = $this->db->query('SELECT gm.*,gp.name,gp.profile_photo FROM garvhai_players_media gm INNER JOIN garvhai_players gp ON gp.id = gm.player_id WHERE gm.player_id = '.$player_id.' AND gm.type = "social"');
+            //$this->db->get_where('garvhai_players_media', array('player_id' => $player_id,'type' => 'social'));
         }
         //echo $this->db->last_query(); exit();
         return $query->result_array();
