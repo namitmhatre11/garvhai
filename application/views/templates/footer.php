@@ -68,6 +68,7 @@
         });
 
         $('.profile-btn').click(function(e){
+          $('body').addClass('loading');
           var lr= $(this).data('lr');
           var lb= $(this).data('tb');
           var playerId = $(this).data('playerid');
@@ -176,6 +177,7 @@
         });
 
         $('input[name="adaniplayers"]').change(function(){
+          $('body').addClass('loading');
           var playerId = $(this).val();
           showModalContent(playerId,'media', 'dynamicMediaContent');
         });
