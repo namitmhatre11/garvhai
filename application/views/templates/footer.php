@@ -138,7 +138,7 @@
         });
 
         $('.media-show').click(function(){
-          showModalContent($(this).data('profileid'),$(this).data('mode'));
+          showModalContent($(this).data('profileid'),$(this).data('mode'), 'mediaListWrpr');
         });
 
         $('.profile-show').click(function(){
@@ -300,7 +300,7 @@
     <script>
     window.fbAsyncInit = function(){
       FB.init({
-          appId: '1743283562560962', status: true, cookie: true, xfbml: true }); 
+          appId: '197178750676127', status: true, cookie: true, xfbml: true }); 
       };
       (function(d, debug){var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
           if(d.getElementById(id)) {return;}
