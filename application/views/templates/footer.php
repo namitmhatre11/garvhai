@@ -181,22 +181,15 @@
 
         $('body').on('click','.fb-user-profile', function(e){
           e.preventDefault();
-          var username = $(this).data('username');
-          var playerimage = $(this).data('playerimage');
-          shareFBData(username,playerimage);
+          elem = $(this);
+          postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
+        return false;
        });
 
         $('body').on('click','.tw-user-profile', function(e){
           e.preventDefault();
           var username = $(this).data('username');
           window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');          
-        });
-
-        $('.fb-share-btn').click(function(e){
-          e.preventDefault();
-          var username = $(this).data('username');
-          var playerimage = $(this).data('playerimage');
-          shareFBData(username,playerimage);
         });
 
         $('#mobileMediaFilter').change(function(e){
@@ -248,8 +241,8 @@
                 var socialHtml = '';
                 var mobileFBSocialHtml = mobileTWSocialHtml = '';
                 if(playerMode == 'profile'){
-                  socialHtml += '<li><a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'" data-playerimage="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a></li><li><a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a></li>';
-                  mobileFBSocialHtml += '<a href="javascript:void(0)" class="social-icon-top fb-user-profile" data-username="'+data.modal_data[0].name+'" data-playerimage="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a>';
+                  socialHtml += '<li><a href="'+baseUrl+'" class="social-icon-top fb-user-profile" data-desc="Proud to support '+data.modal_data[0].name+' in the Rio Olympics 2016. #GarvHai" data-title="'+data.modal_data[0].name+'" data-image="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a></li><li><a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a></li>';
+                  mobileFBSocialHtml += '<a href="'+baseUrl+'" class="social-icon-top fb-user-profile" data-desc="Proud to support '+data.modal_data[0].name+' in the Rio Olympics 2016. #GarvHai" data-title="'+data.modal_data[0].name+'" data-image="'+baseUrl+'uploads/'+data.modal_data[0].profile_photo+'"><img src="'+baseUrl+'assets/img/fb-w.png"></a>';
                   mobileTWSocialHtml += '<a href="javascript:void(0)" class="social-icon-top tw-user-profile" data-username="'+data.modal_data[0].name+'"><img src="'+baseUrl+'assets/img/tw-w.png"></a>';
                     $('.hero-detail-inner-media').addClass('hidden');
                     $('.hero-detail-inner-profile').removeClass('hidden');
@@ -288,35 +281,11 @@
           var d = new Date(s);
           return months[d.getMonth()] + ' ' + d.getDate() + ', ' + d.getFullYear();
       }
-      function shareFBData(username,playerImage){
-        console.log(playerImage);
-        FB.ui(
-          {
-            method: 'feed',
-            name: 'Garvhai',
-            link: 'http://uat.sodelsolutions.com/garvhai/',
-            picture: playerImage,
-            description: 'Proud to support '+username+' in the Rio Olympics 2016. via @GarvHai',
-            message: ''
-          });
-      }
     </script>
 
     <div id="fb-root"></div>
     <script>
-    /*window.fbAsyncInit = function() {
-      FB.init({appId: '1438336106420660', status: true, cookie: true,
-      xfbml: true});
-      };
-      (function() {
-      var e = document.createElement('script'); e.async = true;
-      e.src = document.location.protocol +
-      '//connect.facebook.net/en_US/all.js';
-      document.getElementById('fb-root').appendChild(e);
-    }());*/
-
-
-      window.fbAsyncInit = function(){
+    window.fbAsyncInit = function(){
       FB.init({
           appId: '1743283562560962', status: true, cookie: true, xfbml: true }); 
       };
@@ -333,7 +302,6 @@
 
       $('.btnShare').click(function(){
         elem = $(this);
-        console.log(elem.data('image'));
         postToFeed(elem.data('title'), elem.data('desc'), elem.prop('href'), elem.data('image'));
         return false;
       });
