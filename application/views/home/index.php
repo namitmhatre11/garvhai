@@ -314,7 +314,7 @@
                         <?php }else if($videoData['type'] == 'video') { ?>
                             <a href="#">
                               <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail']; ?>" class="full-width-img">
-                              <div class="light-box-overlay video-overlay" data-id="<?php echo $videoData['id']; ?>"></div>
+                              <div class="light-box-overlay video-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail'];?>" data-title="<?php echo $videoData['name']; ?>" data-desc="Proud to support <?php echo $videoData['name']; ?> in the Rio Olympics 2016. #GarvHai"></div>
                             </a>
                         <?php } ?>               
                       </div>                
@@ -404,7 +404,7 @@
             <h2 class="athletes-act">Catch the athletes in action</h2>
             <ul class="cust-inp-wrpr">
             <li>
-            <input type="radio" id="schedule_all" name="adaniplayers" value="all" checked="checked">
+            <input type="radio" id="schedule_all" name="adaniplayers" value="all">
             <label class="custom-radio text-uppercase" for="schedule_all" >all</label></li>
             <?php
               if(isset($records)){
@@ -512,7 +512,7 @@
         <div class="heros-social-links">
         <ul class="list-inline">
           <li><a id="largeShare" href="<?php echo base_url(); ?>" data-media="yes" data-image="" data-title="" data-desc="" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-          <li><a  id="largeTWShare" href="https://twitter.com/AdaniOnline" class="social-icon-top tw-user-profile" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+          <li><a id="largeTWShare" href="" class="social-icon-top tw-user-profile" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
         </ul>
       </div>
       </div>
