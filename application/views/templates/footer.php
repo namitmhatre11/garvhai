@@ -181,7 +181,7 @@
           $('body').addClass('loading');
           var playerId = $(this).val();
           showModalContent(playerId,'media', 'dynamicMediaContent');
-          $('body').removeClass('loading');
+          
         });
 
         $('body').on('click','.fb-user-profile', function(e){

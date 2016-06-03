@@ -4,7 +4,7 @@
     <section class="video-wrpr">
     <?php if( !$detect->isMobile()){ ?>
       <div class="embed-responsive embed-responsive-16by9 video-resize">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw" frameborder="0" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
       </div>
       <?php }else { ?>
         <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
@@ -404,7 +404,7 @@
             <h2 class="athletes-act">Catch the athletes in action</h2>
             <ul class="cust-inp-wrpr">
             <li>
-            <input type="radio" id="schedule_all" name="adaniplayers" value="all">
+            <input type="radio" id="schedule_all" name="adaniplayers" value="all" checked="checked">
             <label class="custom-radio text-uppercase" for="schedule_all" >all</label></li>
             <?php
               if(isset($records)){
@@ -456,8 +456,8 @@
                   </div>
                   <div class="media-social-icon">
                     <ul class="list-inline">
-                      <li><a href="https://www.facebook.com/AdaniOnline/" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                      <li><a href="https://twitter.com/AdaniOnline" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                      <li><a href="<?php echo $media['link'];?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $media['name'];?>" data-desc="Proud to support <?php echo $media['name'];?> in the Rio Olympics 2016. #GarvHai" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                      <li><a data-title="<?php echo $media['name'];?>"  data-href="<?php echo $media['link'];?>" data-desc="<?php echo $media['media_value'];?>" href="javascript: void(0)" class="social-icon-top tw-user-media"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                     </ul>
                   </div>
                 </div>
