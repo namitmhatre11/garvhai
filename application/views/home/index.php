@@ -4,8 +4,8 @@
     <section class="video-wrpr">
     <?php if( !$detect->isMobile()){ ?>
       <div class="embed-responsive embed-responsive-16by9 video-resize">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw&modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allowfullscreen></iframe>
-      </div>
+        <iframe id="youtube_player" class="embed-responsive-item" src="https://www.youtube.com/embed/B8dOuqyVGew?autoplay=1&loop=1&playlist=GRonxog5mbw&modestbranding=1&autohide=1&showinfo=0&controls=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
+       </div>
       <?php }else { ?>
         <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
         <?php } ?>
@@ -23,6 +23,39 @@
         <div class="vedio-hero-desig">Shot putter</div>
       </div>
       <?php } ?>
+      <div class="video-play-mute">          
+          <a id="pause" href="#" class="active pause-video-img">&nbsp;</a>
+          <a id="mutedd" href="#" class="active1 mute-video-img">&nbsp;</a>
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+          <script>
+          $('#pause').on('click', function() {
+                  var $this = $(this);
+                  $this.toggleClass('active');
+                  if($this.hasClass('active')){
+                      $this.removeClass('play-video-img');
+                      $this.addClass('pause-video-img');
+                      $('#youtube_player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');        
+                  } else {
+                      $this.removeClass('pause-video-img');
+                      $this.addClass('play-video-img');
+                      $('#youtube_player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*'); 
+                  }
+          });
+          $('#mutedd').on('click', function() {
+                  var $this = $(this);
+                  $this.toggleClass('active1');
+                  if($this.hasClass('active1')){
+                      $this.removeClass('unmute-video-img');
+                      $this.addClass('mute-video-img');
+                      $('#youtube_player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'unMute' + '","args":""}', '*');
+                  } else {
+                      $this.removeClass('mute-video-img');
+                      $this.addClass('unmute-video-img');
+                      $('#youtube_player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'mute' + '","args":""}', '*');
+                  }
+          });
+          </script>
+      </div>
       <div class="js--jumper" data-href="#hero-wrpr"><img src="<?php echo base_url(); ?>assets/img/scroll-down.png"></div>
     </section>
     </section>
