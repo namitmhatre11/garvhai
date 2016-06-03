@@ -108,9 +108,9 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .bottom-header-wrpr .nav li+li{margin-left: 56px;}
 .bottom-header-wrpr .nav li.adani-logo{margin-left: 4px;}
 .fix-header .bottom-header-wrpr .nav li.adani-logo{margin-left: 0px;}
-.bottom-header-wrpr .nav{background-color: #fff;padding: 11px 9px;position: relative;}
+.bottom-header-wrpr .nav{background-color: #fff;padding: 10px 9px;position: relative;}
 .main-nav{float: left;position: relative;}
-.bottom-header-wrpr .main-nav:before {width: 125px;content: '';height: 50px;position: absolute;right: -114px;background-image: url('../img/menu-before-bg.png');top: 0;background-repeat: no-repeat;}
+.bottom-header-wrpr .main-nav:before {width: 135px;content: '';height: 50px;position: absolute;right: -111px;background-image: url('../img/menu-before-bg.png');top: -1px;background-repeat: no-repeat;}
 .top-header-wrpr ul li a{color: #fff;font-family: 'rubrikmedium';font-size: 10px;}
 .top-header-wrpr .list-inline>li{padding: 0 7px;}
 .top-video-info{position: absolute;top: 0;left: 0;right: 0;bottom: 0;display: table;vertical-align: middle;height: 100%;text-align: center;width: 100%;}
