@@ -120,7 +120,8 @@
           }
           function reomoveItem(){
             return $('.hero-detail-info').removeClass('right').removeClass('top').removeClass('bottom').removeClass('left');
-          }           
+          }
+          $('body').removeClass('loading');
         });
 
         $('.hover-overlays').hover(function(e){
@@ -180,6 +181,7 @@
           $('body').addClass('loading');
           var playerId = $(this).val();
           showModalContent(playerId,'media', 'dynamicMediaContent');
+          $('body').removeClass('loading');
         });
 
         $('body').on('click','.fb-user-profile', function(e){
