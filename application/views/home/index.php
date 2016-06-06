@@ -418,7 +418,7 @@
                 <span style="width:80px;" id="share-exp" class="btn btn-submit center-block text-uppercase">submit</span>
               </div>
               <p class="email-txt text-center">
-                write us at <a href="mailto:adani@adani.com">adani@adani.com</a>
+                write us at <a href="mailto:communication@adani.com">communication@adani.com</a>
               </p>  
               <p class="abt-social-txt text-uppercase text-center">follow us on</p>
                <div class="heros-social-links text-center">
