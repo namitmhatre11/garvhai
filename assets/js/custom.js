@@ -122,12 +122,18 @@ $(document).ready(function(){
 	        "data-image" : $(this).attr('data-image'),
 	        "data-desc" : $(this).attr('data-desc')
 	    });
+            $("#fbShareData").attr({
+	        "data-name" : $(this).attr('data-title'),
+	        "data-description" : $(this).attr('data-desc')
+	    });
 	    $("#largeTWShare").attr("data-username",$(this).attr('data-title'));	    
 	    $('#myModal').modal('show');
 	});
 });
 $('#carousel-example-generic').bind('slid.bs.carousel', function (e) {
-	$("#largeShare").attr('data-image',$('#carousel-example-generic').find('.active').find('img').attr('src'));
+        $('#fbShareData').html('');
+        $('#fbShareData').html('<a id="largeShare" href="'+baseUrl+'" data-media="yes" data-image="'+$('#carousel-example-generic').find('.active').find('img').attr('src')+'" data-title="'+$("#fbShareData").attr('data-name')+'" data-desc="'+$("#fbShareData").attr('data-description')+'" class="social-icon-top btnShare"><img src="'+baseUrl+'assets/img/fb-w.png"></a>');
+	//$("#largeShare").attr('data-image',$('#carousel-example-generic').find('.active').find('img').attr('src'));
     
 })
 function playerFilterData(playerID){
