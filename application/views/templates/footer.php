@@ -121,7 +121,6 @@
           function reomoveItem(){
             return $('.hero-detail-info').removeClass('right').removeClass('top').removeClass('bottom').removeClass('left');
           }
-          $('body').removeClass('loading');
         });
 
         $('.hover-overlays').hover(function(e){
