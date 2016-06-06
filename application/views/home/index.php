@@ -149,7 +149,7 @@
                 <div class="hero-detail-inner hero-detail-inner-profile hidden">
                   <div class="hero-detail-top">
                     <div class="hero-detail-top-in">
-                      <div class="hero-achive-wrpr">
+                      <!-- <div class="hero-achive-wrpr">
                         <div class="hero-achive-con">
                           <div class="hero-achive-name text-uppercase">INDERJEET SINGH</div>
                           <div class="hero-achive-event">(Shot Put)</div>
@@ -163,7 +163,7 @@
                         <div class="hero-achive-time">
                           22.1
                         </div>
-                      </div>
+                      </div> -->
                       <div class="hero-detail-social-icon text-center">
                         <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">
