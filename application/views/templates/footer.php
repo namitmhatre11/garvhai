@@ -162,7 +162,7 @@
               alertModal.find('.replace-content').text('All fields are required.');
               alertModal.modal('show');
             }else if(name != "" && email != "" && mobile != "" && cmnt != ""){
-              addShareExperience(name, email, mobile, cmnt);
+              addShareExperience(name, $('#email-inp').val(), mobile, cmnt);
             }else if(name == "" && email == false && mobile == "" && cmnt == ""){
               alertModal.find('.replace-content').text('Please enter valid email-id.');
               alertModal.modal('show');
