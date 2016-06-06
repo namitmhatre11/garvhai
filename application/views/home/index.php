@@ -23,6 +23,7 @@
         <div class="vedio-hero-desig">Shot putter</div>
       </div>
       <?php } ?>
+      <?php if( !$detect->isMobile()){ ?>  
       <div class="video-play-mute">          
           <a id="pause" href="#" class="active pause-video-img">&nbsp;</a>
           <a id="mutedd" href="#" class="active1 mute-video-img">&nbsp;</a>
@@ -56,6 +57,7 @@
           });
           </script>
       </div>
+      <?php } ?>
       <div class="js--jumper" data-href="#hero-wrpr"><img src="<?php echo base_url(); ?>assets/img/scroll-down.png"></div>
     </section>
     </section>
