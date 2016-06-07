@@ -84,7 +84,7 @@ $(document).ready(function(){
   })
 $(document).ready(function(){
 
-	$('.filter-btn').click(function(e){
+	$('input[name="players"]').change(function(e){
 		e.preventDefault();
 		e.stopPropagation();
 		$('body').addClass('loading');
