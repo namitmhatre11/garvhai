@@ -49,12 +49,13 @@ class Home_model extends CI_Model {
     {
         $this->load->helper('url');
         $data = array(
-            'user_name' => $upload_data['name'],
-            'email' => $upload_data['email'],
+            'user_name' => $this->db->escape($upload_data['name']),
+            'email' => $this->db->escape($upload_data['email']),
             'mobile' => $upload_data['mobile'],
-            'comment' => $upload_data['cmnt']
+            'comment' => $this->db->escape($upload_data['cmnt'])
         );
 
-        return $this->db->insert('garvhai_users', $data);
+         $sql = $this->db->insert_string('garvhai_users', $data);
+         return $this->db->query($sql);
     }
 }
