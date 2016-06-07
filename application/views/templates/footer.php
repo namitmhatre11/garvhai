@@ -159,6 +159,7 @@
             var email = validateEmail($('#email-inp').val());
             var mobile = $('#tel-inp').val();
             var cmnt = $('#comment-inp').val();
+            var letters = /^[a-zA-Z ]*$/; 
             if(name == "" && $('#email-inp').val() == "" && mobile == "" && cmnt == ""){
               alertModal.find('.replace-content').text('All fields are required.');
               alertModal.modal('show');
@@ -169,6 +170,18 @@
               }
               else if($('#tel-inp').val().length != size){
               alertModal.find('.replace-content').text('Please enter Number exactly 10 digits.');
+              alertModal.modal('show');
+              }
+              else if (/^[a-zA-Z0-9- ]*$/.test(name) == false) {
+              alertModal.find('.replace-content').text('Please enter name  without special characters.');
+              alertModal.modal('show');
+              }
+              else if((!name.match(letters))){
+              alertModal.find('.replace-content').text('Please enter a valid name.');
+              alertModal.modal('show');
+              }
+              else if(cmnt.length <= 10){
+              alertModal.find('.replace-content').text('Please enter comment with atleast 10 characters.');
               alertModal.modal('show');
               }
               else{
