@@ -162,9 +162,26 @@
               alertModal.find('.replace-content').text('All fields are required.');
               alertModal.modal('show');
             }else if(name != "" && email != "" && mobile != "" && cmnt != ""){
-              addShareExperience(name, $('#email-inp').val(), mobile, cmnt);
-            }else if(name == "" && email == false && mobile == "" && cmnt == ""){
+              if(isNaN(mobile)){
+              alertModal.find('.replace-content').text('Please enter Number only.');
+              alertModal.modal('show');
+              }
+              else{
+              addShareExperience(name, $('#email-inp').val(), mobile, cmnt);}
+            }else if(name != "" && $('#email-inp').val() == '' && mobile != "" && cmnt != ""){
+              alertModal.find('.replace-content').text('Please enter email-id.');
+              alertModal.modal('show');
+            }else if(name != "" && email == false && mobile != "" && cmnt != ""){
               alertModal.find('.replace-content').text('Please enter valid email-id.');
+              alertModal.modal('show');
+            }else if(name != "" && email == true && mobile == "" && cmnt != ""){
+              alertModal.find('.replace-content').text('Please enter mobile-no.');
+              alertModal.modal('show');
+            }else if(name != "" && email == true && mobile != "" && cmnt == ""){
+              alertModal.find('.replace-content').text('Please enter comment.');
+              alertModal.modal('show');
+            }else if(name == "" && email == true && mobile != "" && cmnt != ""){
+              alertModal.find('.replace-content').text('Please enter name.');
               alertModal.modal('show');
             }else{
               alertModal.find('.replace-content').text('Please fill other fields also.');
@@ -175,7 +192,6 @@
             alertModal.modal('show');
           }
         });
-
         $('input[name="adaniplayers"]').change(function(){
           $('body').addClass('loading');
           var playerId = $(this).val();
