@@ -152,6 +152,7 @@
         $('#share-exp').click(function(e){
           /*e.stopPropagation();*/
           e.preventDefault();
+          var size = 10;
           var alertModal = $('#alertModal');
           if($('input[id="tnc-inp"]').is(':checked')){
             var name = $('#name-inp').val();
@@ -164,6 +165,10 @@
             }else if(name != "" && email != "" && mobile != "" && cmnt != ""){
               if(isNaN(mobile)){
               alertModal.find('.replace-content').text('Please enter Number only.');
+              alertModal.modal('show');
+              }
+              else if($('#tel-inp').val().length != size){
+              alertModal.find('.replace-content').text('Please enter Number exactly 10 digits.');
               alertModal.modal('show');
               }
               else{
