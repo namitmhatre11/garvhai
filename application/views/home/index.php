@@ -2,30 +2,34 @@
     $detect = new Mobile_Detect;   ?>
    <section id="video-wrpr" class="clearfix">
     <section class="video-wrpr">
-    <?php if( !$detect->isMobile()){ ?>
+    <?php //if( !$detect->isMobile()){ ?>
       <div class="embed-responsive embed-responsive-16by9 video-resize">
         <iframe id="youtube_player" class="embed-responsive-item" src="https://www.youtube.com/embed/0Oxq8aLElEk?autoplay=1&loop=1&playlist=GRonxog5mbw&modestbranding=1&autohide=1&showinfo=0&controls=0&enablejsapi=1&version=3&playerapiid=ytplayer" frameborder="0" allowfullscreen></iframe>
        </div>
-      <?php }else { ?>
+      <?php /*}else { ?>
         <img src="<?php echo base_url(); ?>assets/img/inderjeet-mob-banner.jpg" class="img-responsive mob-inderjeet-img">
-        <?php } ?>
+        <?php }*/ ?>
       <div class="top-video-info">
         <div>
-          <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
+          <h2 class="top-video-title text-upppercase">Two Words Will Make All The Difference</h2>
           <div class="top-video-discrp">
-            They practise their sport, day in and day out, without complain, without expectation <br class="hidden-small" />for a country that doesn’t even know they exist. Now, it’s time to show them we <br class="hidden-small"/>care. It’s time to make our voices heard. It’s time to say <span>#Garvhai</span>
+            To inspire our athletes. To bring them closer to Olympic glory. To stand by them. <br class="hidden-small" />All we have to do is utter these two words: <span>#Garvhai</span>
           </div>          
         </div>
       </div>
-       <?php if( $detect->isMobile()){ ?>      
+       <?php /*if( $detect->isMobile()){ ?>      
       <div class="vedio-title-wrpr">
         <div class="vedio-hero-title text-uppercase">Inderjeet Singh</div>
         <div class="vedio-hero-desig">Shot putter</div>
       </div>
-      <?php } ?>
-      <?php if( !$detect->isMobile()){ ?>  
-      <div class="video-play-mute">          
+      <?php }*/ ?>
+        
+      <div class="video-play-mute">  
+      <?php if( !$detect->isMobile()){ ?>        
           <a id="pause" href="#" class="active pause-video-img">&nbsp;</a>
+      <?php }else{ ?>
+          <a id="pause" href="#" class="active play-video-img">&nbsp;</a>
+       <?php  } ?>
           <a id="mutedd" href="#" class="active1 mute-video-img">&nbsp;</a>
           <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
           <script>
@@ -57,7 +61,7 @@
           });
           </script>
       </div>
-      <?php } ?>
+      <?php //} ?>
       <div class="js--jumper" data-href="#hero-wrpr"><img src="<?php echo base_url(); ?>assets/img/scroll-down.png"></div>
     </section>
     </section>
@@ -321,7 +325,7 @@
                                 echo '</ul>';
                                   if($loopCount == 1){
                                     echo '<div class="btn filter-btn text-uppercase btn-default">
-                                      Videos &amp; IMAGES
+                                      Videos &amp; Images
                                     </div>';
                                   }
                                   echo '</div>';
@@ -431,7 +435,7 @@
                 </div>
               </div>
               <div class="form-group terms-check-wrpr text-center">
-                <h3 class="text-uppercase"><a href="<?php echo base_url(); ?>index.php/home/terms_condition">Terms & Conditions</a></h3>
+                <h3 class="text-uppercase"><a href="/index.php/home/terms_condition">Terms & Conditions</a></h3>
                 <div class="custom-check-wrpr">
                   <input id="tnc-inp" type="checkbox">
                   <label for="tnc-inp" class="text-uppercase">I hereby confirm that the details furnished above are mine and are true and correct to the best of my knowledge and belief. I have read the Privacy Policy & I authorize Garv Hai Website and its partners to call / email / SMS me for any further communication.</label>                  
