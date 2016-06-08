@@ -10,9 +10,9 @@
       <div class="col-sm-6 col-xs-12">
         <nav class="footer-nav clearfix">
           <ul class="nav navbar-nav navbar-right">           
-            <li><a href="<?php echo base_url(); ?>index.php/pages/privacy_policy" target="_blank">Privacy policy</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/pages/legal_disclaimer" target="_blank">Legal disclaimer</a></li>                       
-            <li><a href="<?php echo base_url(); ?>index.php/pages/terms_of_use" target="_blank">Terms of use</a></li>
+            <li><a href="/index.php/pages/privacy_policy" target="_blank">Privacy policy</a></li>
+            <li><a href="/index.php/pages/legal_disclaimer" target="_blank">Legal disclaimer</a></li>                       
+            <li><a href="/index.php/pages/terms_of_use" target="_blank">Terms of use</a></li>
           </ul>
         </nav>
       </div>        
