@@ -24,7 +24,7 @@
       <header class="main-header">
       <section class="top-header-wrpr clearfix">
         <div class="pull-left">
-          <a href="<?php echo base_url(); ?>">
+          <a href="/">
             <img src="<?php echo base_url(); ?>assets/img/logo.png" class="img-responsive">
           </a>
         </div>
