@@ -459,7 +459,7 @@
     <section id="media" class="players-schedule-wrpr">
       <div class="ply-schd-inner clearfix">
         <div class="row">
-          <h2 class="contact-title text-uppercase text-center">Media</h2>
+          <h2 class="media-title text-uppercase text-center">Media</h2>
           <div class="subhead-title">
             Our Olympic warriors are making the right waves.<br/>
             Catch up with all the latest news about our players.
