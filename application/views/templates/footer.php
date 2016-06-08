@@ -283,7 +283,7 @@
       function showModalContent(playerId, playerMode, divToReplace){
         if(playerId && playerMode){
           $.ajax({
-            url: baseUrl+"index.php/home/player_model_data",
+            url: "index.php/home/player_model_data",
             type: 'POST',            
             data: { 'mode': playerMode, 'playerId': playerId },
             dataType: "json",

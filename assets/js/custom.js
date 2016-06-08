@@ -142,7 +142,7 @@ $('#carousel-example-generic').bind('slid.bs.carousel', function (e) {
 function playerFilterData(playerID){
 	if(playerID){
 		$.ajax({
-	  		  url: baseUrl+"index.php/home/player_filter_data",
+	  		  url: "index.php/home/player_filter_data",
 	          type: 'POST',            
 	          data: { 'playerId': playerID },
 	          dataType: "json",
