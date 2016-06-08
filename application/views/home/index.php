@@ -148,7 +148,7 @@
                               } 
                              
                               ?>
-                           <a href="<?php echo base_url(); ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $playerData['name'];?>" data-desc="<?php echo $fbDesc;?>" class="btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                           <a href="/" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $playerData['name'];?>" data-desc="<?php echo $fbDesc;?>" class="btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
                           <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'<?php echo $twDesc; ?>\'via @adani&hashtags=GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
@@ -569,7 +569,7 @@
       <div class="modal-footer">
         <div class="heros-social-links">
         <ul class="list-inline">
-          <li id="fbShareData" data-name="" data-description=""><a id="largeShare" href="<?php echo base_url(); ?>" data-image="" data-title="" data-desc="" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+          <li id="fbShareData" data-name="" data-description=""><a id="largeShare" href="/" data-image="" data-title="" data-desc="" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
           <li><a id="largeTWShare" href="" class="social-icon-top tw-user-profile" data-qualified="" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
         </ul>
       </div>
