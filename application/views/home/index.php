@@ -173,6 +173,9 @@
                           22.1
                         </div>
                       </div> -->
+                      <div class="close-prof">
+                        <img src="<?php echo base_url(); ?>assets/img/close-icon-white.png">
+                      </div>
                       <div class="hero-detail-social-icon text-center">
                         <div id="hero-support-name">Support Inderjeet</div>
                         <ul class="list-inline">

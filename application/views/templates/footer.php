@@ -129,7 +129,7 @@
           $('.user-prof-wrpr').addClass('hidden');          
         });
 
-        $('.back-btn').click(function(){
+        $('.back-btn,.close-prof').click(function(){
           $(this).parents('.hero-detail-info').addClass('hidden');
           $('.user-prof-wrpr').removeClass('hidden');  
           $('.hover-overlays').hide();
