@@ -14,7 +14,8 @@
 	</div>
 <?php }?>
 
-  <form class="form-signin" method="post" action="<?php echo site_url('admin/login'); ?>">
+  <!-- <form class="form-signin" method="post" action="<?php echo site_url('admin/login'); ?>"> -->
+  <form class="form-signin" method="post" action="index.php/admin/login">
     <h2 class="form-signin-heading">Please sign in</h2>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input type="email" name="userEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
