@@ -11,7 +11,7 @@
         <?php }*/ ?>
       <div class="top-video-info">
         <div>
-          <h2 class="top-video-title text-upppercase">TWO WORDS WILL MAKE ALL THE DIFFERENCE</h2>
+          <h2 class="top-video-title text-upppercase">Two Words Will Make All The Difference</h2>
           <div class="top-video-discrp">
             To inspire our athletes. To bring them closer to Olympic glory. To stand by them. <br class="hidden-small" />All we have to do is utter these two words: <span>#Garvhai</span>
           </div>          
@@ -324,7 +324,7 @@
                                 echo '</ul>';
                                   if($loopCount == 1){
                                     echo '<div class="btn filter-btn text-uppercase btn-default">
-                                      Videos &amp; IMAGES
+                                      Videos &amp; Images
                                     </div>';
                                   }
                                   echo '</div>';
