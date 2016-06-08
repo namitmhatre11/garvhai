@@ -16,6 +16,11 @@ $(document).ready(function(){
             var theID = aArray[i];
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
             var divHeight = $(theID).height(); // get the height of the div in question
+			if ( (($('#hero-wrpr').offset().top)-50) < windowPos ) {
+				$('#pause').removeClass('pause-video-img');
+				$('#pause').addClass('play-video-img');
+				$('#youtube_player')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+			}
             if (windowPos >= divPos && windowPos < (divPos + divHeight)) {
               	if(!$("a[data-href='" + theID + "']").parent('li').hasClass("logo-li")){
               	$("a[data-href='" + theID + "']").parent('li').addClass("nav-active");	
@@ -31,7 +36,7 @@ $(document).ready(function(){
         }       
       });
    });
-    
+
     $('.js--jumper,.js--jumper-new').click(function(e){ 
       e.preventDefault();       
     
