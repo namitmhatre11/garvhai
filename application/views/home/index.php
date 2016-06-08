@@ -135,8 +135,17 @@
                       <div class="heros-social-links">
                         <ul class="list-inline">
                           <li class="fb-list">
-                           <a href="<?php echo base_url(); ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $playerData['name'];?>" data-desc="Proud to support <?php echo $playerData['name'];?> in the Rio Olympics 2016. #GarvHai" class="btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-                          <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'Proud to support <?php echo $playerData['name'] ?> in the Rio Olympics 2016. \' via @GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+                          <?php if($playerData['olympic_qulified'] == '1') {
+                              $fbDesc = 'Proud to support '.$playerData["name"].' in the Rio Olympics 2016. #GarvHai @adani';
+                              $twDesc = 'Proud to support '.$playerData["name"].' in the Rio Olympics 2016.';
+                            }else{
+                                $fbDesc = 'Proud to support '.$playerData["name"].'. #GarvHai @adani';
+                                $twDesc = 'Proud to support '.$playerData["name"].'.';
+                              } 
+                             
+                              ?>
+                           <a href="<?php echo base_url(); ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $playerData['profile_photo']; ?>" data-title="<?php echo $playerData['name'];?>" data-desc="<?php echo $fbDesc;?>" class="btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
+                          <li><a onClick="window.open('https://twitter.com/share?url='+escape(window.location.href)+'&text=\'<?php echo $twDesc; ?>\'via @adani&hashtags=GarvHai', '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');" href="javascript: void(0)" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
                         </ul>
                       </div>
                     </div>
@@ -336,20 +345,30 @@
               <div class="replace-filter-data">
                 <?php 
                 if(isset($videoRecords)){
-                  foreach($videoRecords as $videoData) { ?> 
+                  foreach($videoRecords as $videoData) { 
+                    $fbDesc = '';
+                    ?> 
                     <div class="col-xs-4 col-xs-20 light-box-wrpr">
                       <div class="row">
-                      <?php if($videoData['type'] == 'image') { 
+                      <?php 
+                      if($videoData['olympic_qulified'] == '1') {
+
+                          $fbDesc .= 'Proud to support '.$videoData["name"].' in the Rio Olympics 2016. #GarvHai @adani';
+                        }else{
+                          $fbDesc .= 'Proud to support '.$videoData["name"].'. #GarvHai @adani';
+                        } 
+
+                      if($videoData['type'] == 'image') { 
                             $largeImg = explode('.', $videoData['media_value']);
                         ?>
                           <a>
                             <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['media_value']; ?>" class="full-width-img">
-                            <div class="light-box-overlay image-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $largeImg[0].'-l.jpg'; ?>" data-title="<?php echo $videoData['name']; ?>" data-desc="Proud to support <?php echo $videoData['name']; ?> in the Rio Olympics 2016. #GarvHai"></div>
+                            <div class="light-box-overlay image-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $largeImg[0].'-l.jpg'; ?>" data-qualified="<?php echo $videoData['olympic_qulified']; ?>" data-title="<?php echo $videoData['name']; ?>" data-desc="<?php echo $fbDesc; ?>"></div>
                           </a>   
                         <?php }else if($videoData['type'] == 'video') { ?>
                             <a href="#">
                               <img src="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail']; ?>" class="full-width-img">
-                              <div class="light-box-overlay video-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail'];?>" data-title="<?php echo $videoData['name']; ?>" data-desc="Proud to support <?php echo $videoData['name']; ?> in the Rio Olympics 2016. #GarvHai"></div>
+                              <div class="light-box-overlay video-overlay" data-id="<?php echo $videoData['id']; ?>" data-image="<?php echo base_url(); ?>uploads/<?php echo $videoData['video_thumbnail'];?>" data-title="<?php echo $videoData['name']; ?>" data-desc="<?php echo $fbDesc; ?>"></div>
                             </a>
                         <?php } ?>               
                       </div>                
@@ -547,7 +566,7 @@
         <div class="heros-social-links">
         <ul class="list-inline">
           <li id="fbShareData" data-name="" data-description=""><a id="largeShare" href="<?php echo base_url(); ?>" data-media="yes" data-image="" data-title="" data-desc="" class="social-icon-top btnShare"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
-          <li><a id="largeTWShare" href="" class="social-icon-top tw-user-profile" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
+          <li><a id="largeTWShare" href="" class="social-icon-top tw-user-profile" data-qualified="" data-username=""><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
         </ul>
       </div>
       </div>
