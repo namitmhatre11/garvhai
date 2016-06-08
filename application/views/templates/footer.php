@@ -269,7 +269,7 @@
 
       function addShareExperience(name, email, mobile, cmnt){
         $.ajax({
-            url: baseUrl+"index.php/home/share_experience_data",
+            url: "/index.php/home/share_experience_data",
             type: 'POST',            
             data: { 'name': name, 'email': email, 'mobile': mobile, 'cmnt': cmnt },
             dataType: "json",
@@ -283,7 +283,7 @@
       function showModalContent(playerId, playerMode, divToReplace){
         if(playerId && playerMode){
           $.ajax({
-            url: "index.php/home/player_model_data",
+            url: "/index.php/home/player_model_data",
             type: 'POST',            
             data: { 'mode': playerMode, 'playerId': playerId },
             dataType: "json",
