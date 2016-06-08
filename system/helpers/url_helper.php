@@ -106,7 +106,15 @@ if ( ! function_exists('current_url'))
 		return $CI->config->site_url($CI->uri->uri_string());
 	}
 }
-
+// Create custom URL--------------------------------------------------------------
+if ( ! function_exists('assets_url'))
+{
+    function assets_url()
+    {
+        $CI =& get_instance();
+        return $CI->config->config['assets_url'];
+    }
+}
 // ------------------------------------------------------------------------
 
 if ( ! function_exists('uri_string'))
