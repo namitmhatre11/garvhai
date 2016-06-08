@@ -11,9 +11,9 @@
         <?php }*/ ?>
       <div class="top-video-info">
         <div>
-          <h2 class="top-video-title text-upppercase">the unsung heroes</h2>
+          <h2 class="top-video-title text-upppercase">TWO WORDS WILL MAKE ALL THE DIFFERENCE</h2>
           <div class="top-video-discrp">
-            They practise their sport, day in and day out, without complain, without expectation <br class="hidden-small" />for a country that doesn’t even know they exist. Now, it’s time to show them we <br class="hidden-small"/>care. It’s time to make our voices heard. It’s time to say <span>#Garvhai</span>
+            To inspire our athletes. To bring them closer to Olympic glory. To stand by them. <br class="hidden-small" />All we have to do is utter these two words: <span>#Garvhai</span>
           </div>          
         </div>
       </div>
