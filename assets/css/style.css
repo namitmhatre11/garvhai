@@ -222,6 +222,7 @@ html,body{height: 100%;font-family: 'rubrikregular';color: #000;font-size: 12px;
 .cust-inp-wrpr li+li{margin-top: 12px;}
 .filter-btn{background-color: transparent;border: 1px solid #fff;color: #fff;margin-top: 5px;}
 .filter-title{font-size: 18px;font-family: 'rubrikmedium';margin: 10px 0;}
+.subhead-title{font-size: 18px;font-family: 'rubrikmedium';margin: 10px 0; text-align: center; color: #fff;}
 .menu-btn,.mob-menu-list{display: none;}
 div.facebook .pp_previous{background: url(../img/prettyPhoto/facebook/btnPrevious.png) center left no-repeat;}
 div.facebook .pp_next{background: url(../img/prettyPhoto/facebook/btnNext.png) center right no-repeat;}
