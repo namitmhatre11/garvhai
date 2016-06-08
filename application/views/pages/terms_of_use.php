@@ -108,9 +108,9 @@
       <div class="col-sm-6 col-xs-12">
         <nav class="footer-nav clearfix">
           <ul class="nav navbar-nav navbar-right">           
-            <li><a href="<?php echo base_url(); ?>index.php/pages/privacy_policy">Privacy policy</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/pages/legal_disclaimer">Legal disclaimer</a></li>                       
-            <li><a href="<?php echo base_url(); ?>index.php/pages/terms_of_use">Terms of use</a></li>
+            <li><a href="/index.php/pages/privacy_policy">Privacy policy</a></li>
+            <li><a href="/index.php/pages/legal_disclaimer">Legal disclaimer</a></li>                       
+            <li><a href="/index.php/pages/terms_of_use">Terms of use</a></li>
           </ul>
         </nav>
       </div>        
