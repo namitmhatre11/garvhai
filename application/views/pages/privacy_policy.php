@@ -29,8 +29,8 @@
         </div>
         <div class="pull-right">
           <ul class="list-inline">
-            <li class="vid-img-links"><a href="<?php echo base_url(); ?>index.php/home/#hero-wrpr" class="text-uppercase upper-links">Videos & images</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/home/#media" class="text-uppercase upper-links">Media</a></li>
+            <li class="vid-img-links"><a href="/index.php/home/#hero-wrpr" class="text-uppercase upper-links">Videos & images</a></li>
+            <li><a href="/index.php/home/#media" class="text-uppercase upper-links">Media</a></li>
             <li class="tw-top-links"><a href="https://www.facebook.com/AdaniOnline/" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/fb-w.png"></a></li>
             <li><a href="https://twitter.com/AdaniOnline" target="blank" class="social-icon-top"><img src="<?php echo base_url(); ?>assets/img/tw-w.png"></a></li>
           </ul>
@@ -42,8 +42,8 @@
           <img src="<?php echo base_url(); ?>assets/img/menu-close.png" class="menu-close hidden">
         </div>
         <ul class="list-inline pull-right mob-menu-list">
-          <li class="text-uppercase vid-img-links-mob"><a href="<?php echo base_url(); ?>index.php/home/#hero-wrpr">videos &amp; images</a></li>
-          <li class="text-uppercase"><a href="<?php echo base_url(); ?>index.php/home/#media">media</a></li>
+          <li class="text-uppercase vid-img-links-mob"><a href="/index.php/home/#hero-wrpr">videos &amp; images</a></li>
+          <li class="text-uppercase"><a href="/index.php/home/#media">media</a></li>
           <li><a href="#"><img src="<?php echo base_url(); ?>assets/img/adani.png"></a></li>
         </ul>
         <nav id="topNav" class="main-nav navbar-fixed-top">
@@ -56,12 +56,12 @@
           </a></li>
             <!-- <li ><a href="<?php echo base_url(); ?>#hero-wrpr" class="text-uppercase">players</a></li>
             <li><a href="#" class="text-uppercase">upcoming talent</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/home/about" class="text-uppercase">about garv hai</a></li>
+            <li><a href="/index.php/home/about" class="text-uppercase">about garv hai</a></li>
             <li><a href="#" class="text-uppercase">contact</a></li> -->
-            <li ><a href="<?php echo base_url(); ?>index.php/home/#hero-wrpr" class="text-uppercase page-scroll">players</a></li>          
-            <li><a href="<?php echo base_url(); ?>index.php/home/#about" class="text-uppercase page-scroll">about</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/home/#contact" class="text-uppercase page-scroll">contact</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/home/#media" class="text-uppercase page-scroll">media</a></li>            
+            <li ><a href="/index.php/home/#hero-wrpr" class="text-uppercase page-scroll">players</a></li>          
+            <li><a href="/index.php/home/#about" class="text-uppercase page-scroll">about</a></li>
+            <li><a href="/index.php/home/#contact" class="text-uppercase page-scroll">contact</a></li>
+            <li><a href="/index.php/home/#media" class="text-uppercase page-scroll">media</a></li>            
             <li class="socail-li"><a href="https://www.facebook.com/AdaniOnline/" target="blank"><img src="<?php echo base_url(); ?>assets/img/fb-b.png"></a></li>
             <li class="socail-li"><a href="https://twitter.com/AdaniOnline" target="blank"><img src="<?php echo base_url(); ?>assets/img/tw-b.png"></a></li>                                 
           </ul>
@@ -102,9 +102,9 @@
       <div class="col-sm-6 col-xs-12">
         <nav class="footer-nav clearfix">
           <ul class="nav navbar-nav navbar-right">           
-            <li><a href="<?php echo base_url(); ?>index.php/pages/privacy_policy">Privacy policy</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/pages/legal_disclaimer">Legal disclaimer</a></li>                       
-            <li><a href="<?php echo base_url(); ?>index.php/pages/terms_of_use">Terms of use</a></li>
+            <li><a href="/index.php/pages/privacy_policy">Privacy policy</a></li>
+            <li><a href="/index.php/pages/legal_disclaimer">Legal disclaimer</a></li>                       
+            <li><a href="/index.php/pages/terms_of_use">Terms of use</a></li>
           </ul>
         </nav>
       </div>        
