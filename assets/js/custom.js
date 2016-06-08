@@ -12,7 +12,6 @@ $(document).ready(function(){
         var windowPos = $(window).scrollTop(); // get the offset of the window from the top of page
         var windowHeight = $(window).height(); // get the height of the window
         var docHeight = $(document).height();
-
         for (var i=0; i < aArray.length; i++) {
             var theID = aArray[i];
             var divPos = $(theID).offset().top; // get the offset of the div from the top of page
@@ -122,11 +121,12 @@ $(document).ready(function(){
 	        "data-image" : $(this).attr('data-image'),
 	        "data-desc" : $(this).attr('data-desc')
 	    });
-            $("#fbShareData").attr({
+        $("#fbShareData").attr({
 	        "data-name" : $(this).attr('data-title'),
 	        "data-description" : $(this).attr('data-desc')
 	    });
 	    $("#largeTWShare").attr("data-username",$(this).attr('data-title'));	    
+	    $("#largeTWShare").attr("data-qualified",$(this).attr('data-qualified'));
 	    $('#myModal').modal('show');
 	});
 });
@@ -150,10 +150,16 @@ function playerFilterData(playerID){
 	          		if(data.filter_data.length != 0) {
 		          		$.each( data, function( index, filterValue ) { 
 		          			for(var i=0; i<filterValue.length; i++){
+		          				var fbDesc = '';
 		          				filterHtml += '<div class="col-xs-4 col-xs-20 light-box-wrpr"><div class="row">';
+		          				if(filterValue[i].olympic_qulified == 1){
+				                    fbDesc += 'Proud to support '+filterValue[i].name+' in the Rio Olympics 2016. #GarvHai @adani';
+				                  }else{
+				                    fbDesc += 'Proud to support '+filterValue[i].name+'. #GarvHai @adani';
+				                  }
 		          				if(filterValue[i].type == 'image'){
 		          					entryArray = filterValue[i].media_value.split('.');
-		          					filterHtml += '<a><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'" class="full-width-img"><div class="light-box-overlay image-overlay" data-id="'+filterValue[i].id+'" data-desc="Proud to support '+filterValue[i].name+' in the Rio Olympics 2016. #GarvHai" data-title="'+filterValue[i].name+'" data-image="'+baseUrl+'uploads/'+entryArray[0]+'-l.jpg"></div></a>';
+		          					filterHtml += '<a><img src="'+baseUrl+'uploads/'+filterValue[i].media_value+'" class="full-width-img"><div class="light-box-overlay image-overlay" data-id="'+filterValue[i].id+'" data-desc="'+fbDesc+'" data-title="'+filterValue[i].name+'" data-qualified="'+filterValue[i].olympic_qulified+'" data-image="'+baseUrl+'uploads/'+entryArray[0]+'-l.jpg"></div></a>';
 		          					modalInnerHtml += '<div class="item" id="modalImg_'+filterValue[i].id+'"><img src="'+baseUrl+'uploads/'+filterValue[i].media_value.split('.', 1)+'-l.jpg"></div>';
 		          				}else if(filterValue[i].type == 'video'){
 		          					filterHtml += '<a href="#"><img src="'+baseUrl+'uploads/'+filterValue[i].video_thumbnail+'" class="full-width-img"><div class="light-box-overlay video-overlay" data-id="'+filterValue[i].id+'"></div></a>';
