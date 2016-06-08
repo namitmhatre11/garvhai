@@ -11,7 +11,7 @@
     <link href="<?php echo base_url(); ?>assets/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
     
-    <link href="<?php echo base_url(); ?>assets/css/style.css?ver=0.4" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>assets/css/style.css?ver=0.5" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -67,7 +67,7 @@
           </a></li>
             <!-- <li ><a href="<?php echo base_url(); ?>#hero-wrpr" class="text-uppercase">players</a></li>
             <li><a href="#" class="text-uppercase">upcoming talent</a></li>
-            <li><a href="<?php echo base_url(); ?>index.php/home/about" class="text-uppercase">about garv hai</a></li>
+            <li><a href="/index.php/home/about" class="text-uppercase">about garv hai</a></li>
             <li><a href="#" class="text-uppercase">contact</a></li> -->
             <li ><a href="#" data-href="#hero-wrpr" class="text-uppercase page-scroll">players</a></li>          
             <li><a href="#" data-href="#about" class="text-uppercase page-scroll">about</a></li>
